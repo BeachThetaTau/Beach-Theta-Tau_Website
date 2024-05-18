@@ -1,0 +1,52 @@
+@import url("https://use.typekit.net/obn7dcx.css");
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  height: 100vh;
+  align-items: center;
+}
+
+.service-container-grey {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+    height: 100vh;
+    align-items: center;
+    background-color: #ECECEC;
+  }
+.service-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 35rem;
+  padding-left: 10rem;
+
+}
+.service-heading {
+  font-size: 3rem;
+  color: #7F170E;
+  font-weight: 700;
+}
+
+.service-txt{
+  font-size: 1rem;
+}
+
+.service-img{
+    padding-right: 10rem;
+}
+
+.job{
+    width: 90vw;
+    padding-left: 10rem;
+}
+

@@ -1,0 +1,100 @@
+
+
+
+@import url("https://use.typekit.net/obn7dcx.css");
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
+}
+
+.our-moto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.our-moto-img {
+  width: 30rem;
+  height: 15.7rem;
+}
+
+.our-moto-heading {
+  font-size: 1.75rem;
+  font-weight: medium;
+  color: #7f170e;
+}
+
+.our-moto-verse {
+  font-size: 2.625rem;
+  color: #545454;
+  font-style: italic;
+  font-weight: medium;
+  width: 55.4375rem;
+  text-align: center;
+}
+
+.our-motto-cite {
+  font-size: 2.625rem;
+  color: #f8cd46;
+  font-style: italic;
+  font-weight: medium;
+}
+
+.theta-tau-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  background-color: #ececec;
+  padding: 9rem 5rem 9rem 5rem;
+}
+
+.theta-tau-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theta-tau-header {
+  font-size: 2rem;
+  color: #7f170e;
+  font-weight: 700;
+}
+
+.theta-tau-txt {
+  font-size: 1rem;
+  color: #545454;
+  width: 25rem;
+}
+
+.xi-epsilon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  padding: 13rem 5rem 13rem 5rem;
+}
+
+.xi-epsilon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25rem;
+}
+
+.xi-epsilon-heading {
+  font-size: 2rem;
+  color: #7f170e;
+  font-weight: 700;
+}
+
+.xi-epsilon-txt {
+  color: #000;
+  font-size: 1rem;
+}
+
+.founders {
+  width: 36rem;
+  height: 27rem;
+}

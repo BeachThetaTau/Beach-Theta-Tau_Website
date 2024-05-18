@@ -1,0 +1,65 @@
+@import url("https://use.typekit.net/obn7dcx.css");
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
+}
+
+.professionalism-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  height: 100vh;
+  align-items: center;
+}
+
+.professionalism-container-grey {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+    height: 100vh;
+    align-items: center;
+    background-color: #ECECEC;
+  }
+.professionalism-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 35rem;
+  padding-left: 10rem;
+
+}
+.professionalism-heading {
+  font-size: 3rem;
+  color: #7F170E;
+  font-weight: 700;
+}
+
+.professionalism-txt{
+  font-size: 1rem;
+}
+
+.professionalism-img{
+    padding-right: 10rem;
+}
+
+.job{
+    width: 90vw;
+    padding-left: 10rem;
+}
+
+.job-heading{
+    font-size: 3rem;
+    color: #7F170E;
+    font-weight: 700;
+    padding-top: 10rem;
+    padding-left: 10rem;
+}
+
+.job-container{
+height: 100vh;
+justify-content: center;
+}
+

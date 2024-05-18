@@ -1,0 +1,175 @@
+@import url("https://use.typekit.net/obn7dcx.css");
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
+}
+
+
+.pillars-list-container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+}
+
+/* Purpose Section */
+.gray-background {
+  background-color: #ececec;
+}
+
+.purpose {
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2vh 0;
+  background-color: #ececec;
+}
+
+.purpose h4 {
+  font-size: 1.75rem;
+  color: #7f170e;
+  font-weight: 500;
+}
+
+.purpose p {
+  font-size: 2.25rem;
+  color: #545454;
+  font-weight: 600;
+}
+
+#yellow {
+  color: #fbbc04;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+
+.who-are-we-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.who-are-we-container img {
+  width: 50vw;
+  height: auto;
+}
+
+.who-are-we-txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.who-are-we-txt-container p {
+  width: 20vw;
+  font-size: 1rem;
+  color: #181818;
+}
+
+.who-are-we-txt-container h4 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #545454;
+}
+
+/* Achievements Section */
+.red-background {
+  background-color: #7f170e;
+  height: 35vh;
+  padding-top: 6vh;
+}
+
+.achievements-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: #f9f9f9;
+}
+
+.achievements h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.achievements p {
+  font-size: 1.625rem;
+}
+
+.achievements-subheading {
+  font-size: 1.75rem;
+  color: #f9f9f9;
+  text-align: center;
+}
+
+/* Pillars Section */
+.pillars-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dark-gray-background {
+  background-color: #d8d8d8;
+  width: 40vw;
+  height: 100vh;
+  padding: 10vh 5vw;
+  text-align: center;
+}
+
+.our-pillars-title {
+  font-size: 1.75rem;
+}
+
+.our-pillars-heading {
+  font-size: 2.625rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.pillars-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pillars-list li {
+  margin: 0;
+  padding: 0;
+  min-width: 25rem;
+  width: 25rem;
+  text-align: center;
+}
+
+.pillars-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pillars-img {
+  width: 5vw;
+  height: auto;
+}
+
+.pillars-heading {
+  font-size: 2.25rem;
+  color: #7f170e;
+}
+
+.pillars-txt {
+  width: 20vw;
+  font-size: 1rem;
+}
+
+.end-pic {
+  width: 100%;
+}
+

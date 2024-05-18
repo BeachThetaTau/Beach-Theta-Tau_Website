@@ -1,0 +1,48 @@
+@import url("https://use.typekit.net/obn7dcx.css");
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  height: 100vh;
+  align-items: center;
+}
+
+.social-container-grey {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+    height: 100vh;
+    align-items: center;
+    background-color: #ECECEC;
+  }
+.social-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 35rem;
+  padding-left: 10rem;
+
+}
+.social-heading {
+  font-size: 3rem;
+  color: #7F170E;
+  font-weight: 700;
+}
+
+.social-txt{
+  font-size: 1rem;
+}
+
+.social-img{
+    padding-right: 10rem;
+}
+
+
