@@ -1,16 +1,16 @@
 @import url("https://use.typekit.net/obn7dcx.css");
 
-* {
-  font-family: "alibaba-sans", sans-serif;
-  font-size: 16px;
-}
-
 :root {
   --tt-red: #7f170e;
   --tt-yellow: #f8cd46;
   --tt-white: #f9f9f9;
   --tt-grey: #ececec;
   --tt-text-grey: #545454;
+}
+
+* {
+  font-family: "alibaba-sans", sans-serif;
+  font-size: 16px;
 }
 
 .service-container {

@@ -1,65 +1,115 @@
 @import url("https://use.typekit.net/obn7dcx.css");
 
+:root {
+  --tt-red: #7f170e;
+  --tt-yellow: #f8cd46;
+  --tt-white: #f9f9f9;
+  --tt-grey: #ececec;
+  --tt-text-grey: #545454;
+}
+
 * {
   font-family: "alibaba-sans", sans-serif;
   font-size: 16px;
 }
 
-.professionalism-container {
+.proff {
+  padding: 4.6875rem;
+}
+
+.proff-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.proff-txt {
+  font-size: 1.25rem;
+  color: var(--tt-text-grey);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.proff-card {
   display: flex;
   flex-direction: row;
+  background-color: #d8d8d8;
+  padding: 4.0625rem 2.1875rem 4.0625rem 2.1875rem;
+  width: 66.625rem;
+  border-radius: 1.875rem;
+  align-items: center;
+  margin: 4.6875rem 0 4.6875rem 0;
+  flex-wrap: wrap;
+  
+}
+
+.proff-card-txt {
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding-left: 2rem;
+  width: 35.5rem;
+}
+.center-div {
+  display: flex;
   justify-content: center;
-  gap: 10rem;
-  height: 100vh;
   align-items: center;
 }
 
-.professionalism-container-grey {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10rem;
-    height: 100vh;
-    align-items: center;
-    background-color: #ECECEC;
-  }
-.professionalism-info {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 35rem;
-  padding-left: 10rem;
-
+.proff-line {
+  width: 80.625rem;
+  height: 1px;
+  background-color: black;
+  margin: 20px 0;
 }
-.professionalism-heading {
-  font-size: 3rem;
-  color: #7F170E;
+
+.proff-subheading {
+  font-size: 2.25rem;
+  color: var(--tt-red);
   font-weight: 700;
 }
 
-.professionalism-txt{
-  font-size: 1rem;
+.offerings-card {
+  background-color: #d8d8d8;
+  width: 18.75rem;
+  height: 31.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 7.0625rem 1.5rem 0 1.5rem;
+  border-radius: 1.5625rem;
 }
 
-.professionalism-img{
-    padding-right: 10rem;
+.offerings-card-container {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
 }
 
-.job{
-    width: 90vw;
-    padding-left: 10rem;
+.offering-card-heading {
+  font-size: 1.6875rem;
+  font-weight: 600;
+  color: var(--tt-red);
 }
 
-.job-heading{
-    font-size: 3rem;
-    color: #7F170E;
-    font-weight: 700;
-    padding-top: 10rem;
-    padding-left: 10rem;
+.offering-card-txt {
+  font-size: 0.9375rem;
 }
 
-.job-container{
-height: 100vh;
-justify-content: center;
+.offering-headding{
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 
+.offering-subtxt{
+  font-size: 1.25rem;
+  padding-top: 1rem;
+}
+
+.offerings{
+  background-color: #ECECEC;
+  padding: 6.1875rem 11.5rem 6.1875rem 11.5rem;
+
+}

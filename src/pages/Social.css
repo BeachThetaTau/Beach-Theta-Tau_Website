@@ -15,34 +15,37 @@
 }
 
 .social-container-grey {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10rem;
-    height: 100vh;
-    align-items: center;
-    background-color: #ECECEC;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  height: 100vh;
+  align-items: center;
+  background-color: #ececec;
+}
 .social-info {
   display: flex;
   flex-direction: column;
   align-items: left;
   width: 35rem;
   padding-left: 10rem;
-
 }
 .social-heading {
   font-size: 3rem;
-  color: #7F170E;
+  color: #7f170e;
   font-weight: 700;
 }
 
-.social-txt{
+.social-txt {
   font-size: 1rem;
 }
 
-.social-img{
-    padding-right: 10rem;
+.social-img {
+  padding-right: 10rem;
 }
 
-
+.center-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

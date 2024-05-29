@@ -2,100 +2,119 @@ import NavBar from "../components/NavBar";
 import DisplayCarousel from "../components/ThreeImgCarousel";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
+import FadeInList from "../components/FadeInList";
 import "./Professionalism.css";
 
 function Professionalism() {
   return (
     <>
       <NavBar />
-      <GenerateParallax 
-      fileName="Professionalism.png" 
-      title="Professionalism" />
+      <GenerateParallax
+        fileName="Professionalism.png"
+        title="Professionalism"
+      />
 
-      {/* RESUME WORKSHOP */}
-      <div className="professionalism-container-grey">
-        <div className="professionalism-info">
-          <p className="professionalism-heading">RESUME WORKSHOP</p>
-          <p className="professionalism-txt">
-            In our fraternity, we prioritize professional development and
-            success, which is why we host resume workshops to equip our members
-            with essential career-building skills. These workshops are designed
-            to help brothers craft impressive resumes that highlight their
-            strengths, experiences, and ambitions. We provide guidance on
-            formatting, content, and tailoring resumes for specific industries
-            or roles. Additionally, we invite guest speakers and alumni to share
-            valuable insights and tips for navigating the job market
-            successfully.
+      <div className="proff">
+        <h2 className="proff-heading">
+          Empowering Members: Navigating the Path to Career Success
+        </h2>
+
+        <p className="proff-txt">
+          We're proud to prepare our members for the job market, offering
+          workshops, seminars, and mentorship to develop essential skills like
+          communication, teamwork, problem-solving, and leadership. Topics
+          include resume building, interview prep, networking strategies, and
+          professional etiquette.
+        </p>
+        <p className="proff-txt">
+          Our extensive alumni network provides hands-on experiences via
+          internships, tours, job shadowing, and industry partnerships. This
+          practical exposure helps members apply skills, gain insights, and
+          build professional networks. We're dedicated to empowering members
+          with tools and experiences vital for success in today's job market.
+        </p>
+        <div className="center-div">
+          <div className="proff-card">
+            <DisplayCarousel
+              firstImage="BlankImg.png"
+              secondImage="BlankImg.png"
+              thirdImage="BlankImg.png"
+            />
+            <div>
+              <p className="proff-card-txt">
+                In the competitive world of engineering internships, Xi Epsilon
+                Chapter's professional development committee supports members in
+                landing opportunities. We provide resume reviews, mock
+                interviews, and encourage LinkedIn presence. Currently, twelve
+                active brothers are in co-ops, with others securing summer
+                internships.
+              </p>
+              <p className="proff-card-txt">
+                Former regent Adam Bhuiyan credits the committee for internship
+                success, citing industry events, resume workshops, and interview
+                practice. Carine Gordillo attributes her Microsoft internship to
+                Theta Tau's mentorship and skill development. Mia Castro landed
+                a Gray Construction internship with support from fellow
+                brothers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="proff-line" />
+        <h2 className="proff-subheading">WHERE TT CAN TAKE YOU</h2>
+        <FadeInList />
+			  </div>
+
+        <div className="offerings">
+          <h2 className="offering-headding">
+            A strong introduction can transform your career trajectory
+          </h2>
+          <p className="offering-subtxt">
+            Generic job applications often fall flat with top-tier employers. We
+            connect you with the opportunities that can shape your professional
+            journey by harnessing the strength of personal connections and
+            networking advantages.
           </p>
+				
+
+          <div className="offerings-card-container">
+            <div className="offerings-card">
+              <h3 className="offering-card-heading">Resume Workshop</h3>
+              <p className="offering-card-txt">
+                We host resume workshops to equip our members with essential
+                career-building skills. These workshops are designed to help
+                brothers craft impressive resumes that highlight their
+                strengths, experiences, and ambitions. We provide guidance on
+                formatting, content, and tailoring resumes for specific
+                industries or roles.
+              </p>
+            </div>
+
+            <div className="offerings-card">
+              <h3 className="offering-card-heading">On-Site Tours</h3>
+              <p className="offering-card-txt">
+                Our alumni network offers frequent on-site tours at various
+                workplaces, providing valuable industry insights and networking
+                opportunities. These tours deepen our understanding of career
+                paths, connect us with professionals, and broaden our
+                perspectives on the professional world.
+              </p>
+            </div>
+
+            <div className="offerings-card">
+              <h3 className="offering-card-heading">Mock Interview</h3>
+              <p className="offering-card-txt">
+                Our brothers' diverse experiences and commitment to growth drive
+                us to conduct mock interviews. These simulations mimic real
+                interviews, helping us practice answering questions, highlight
+                strengths, and enhance communication skills. Valuable feedback
+                from experienced members and alumni refines our techniques and
+                boosts confidence.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="professionalism-img">
-          <DisplayCarousel
-            firstImage="BlankImg.png"
-            secondImage="BlankImg.png"
-            thirdImage="BlankImg.png"
-          />
-        </div>
-      </div>
-
-      <div className="professionalism-container">
-        <div className="professionalism-info">
-          <p className="professionalism-heading">MOCK INTERVIEW</p>
-          <p className="professionalism-txt">
-            With our brothers' diverse work experiences and dedication to
-            professional growth, we conduct mock interviews to sharpen our
-            skills and prepare for real-world career opportunities. These mock
-            interviews simulate real interview scenarios, allowing us to
-            practice answering common questions, showcase our strengths, and
-            improve our communication and presentation skills. We also receive
-            valuable feedback and guidance from experienced members and alumni,
-            helping us refine our interview techniques and build confidence.
-            Participating in mock interviews is a valuable step in our journey
-            towards securing internships, jobs, and advancing our careers.
-          </p>
-        </div>
-
-        <div className="professionalism-img">
-          <DisplayCarousel
-            firstImage="BlankImg.png"
-            secondImage="BlankImg.png"
-            thirdImage="BlankImg.png"
-          />
-        </div>
-      </div>
-
-      <div className="professionalism-container-grey">
-        <div className="professionalism-info">
-          <p className="professionalism-heading">ON-SITE TOURS</p>
-          <p className="professionalism-txt">
-            With our extensive alumni network, we are fortunate to have numerous
-            opportunities to participate in on-site tours of various offices and
-            workplaces. These tours provide invaluable insights into different
-            industries, company cultures, and day-to-day operations. Through
-            these firsthand experiences, we gain a deeper understanding of
-            potential career paths, network with professionals in our fields of
-            interest, and broaden our perspectives on the professional world.
-            Whether it's visiting tech startups, corporate headquarters, or
-            non-profit organizations, these on-site tours offer a glimpse into
-            our potential future careers and inspire us to strive for
-            excellence.
-          </p>
-        </div>
-
-        <div className="professionalism-img">
-          <DisplayCarousel
-            firstImage="BlankImg.png"
-            secondImage="BlankImg.png"
-            thirdImage="BlankImg.png"
-          />
-        </div>
-      </div>
-
-      <div className="job-container">
-        <p className="job-heading">WHERE TT CAN TAKE YOU</p>
-        <img src="Jobs.png" alt="" className="job" />
-      </div>
-    
       <Footer />
     </>
   );

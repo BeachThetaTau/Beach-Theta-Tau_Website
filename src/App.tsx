@@ -8,8 +8,6 @@ import Apply from "./pages/Apply.tsx";
 
 {
 
-
-
 /*
 <Home/>
 <About/>
@@ -21,7 +19,7 @@ import Apply from "./pages/Apply.tsx";
 }
 
 const App = () => (
-<Service/>
+<Professionalism/>
 );
 
 export default App;
