@@ -5,48 +5,156 @@
   font-size: 16px;
 }
 
+:root {
+  --tt-red: #7f170e;
+  --tt-yellow: #f8cd46;
+  --tt-white: #f9f9f9;
+  --tt-grey: #ececec;
+  --tt-text-grey: #545454;
+}
+
 .service-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
-  gap: 10rem;
   height: 100vh;
-  align-items: center;
+  width: 100vw;
+  gap: 6.25rem;
+  background-color: var(--tt-grey);
 }
 
-.service-container-grey {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10rem;
-    height: 100vh;
-    align-items: center;
-    background-color: #ECECEC;
-  }
-.service-info {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 35rem;
-  padding-left: 10rem;
-
+.service-headding {
+  font-size: 2.5rem;
+  font-weight: 900;
 }
-.service-heading {
-  font-size: 3rem;
-  color: #7F170E;
-  font-weight: 700;
+
+.service-body {
+  width: 34.75rem;
 }
 
 .service-txt{
-  font-size: 1rem;
+font-size: 1rem;
+font-weight: 500;
+color: var(--tt-text-grey);
 }
 
-.service-img{
-    padding-right: 10rem;
+.img-container-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5625rem;
 }
 
-.job{
-    width: 90vw;
-    padding-left: 10rem;
+.img-container-verticle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
 }
 
+#service-img {
+  width: 26.5625rem;
+  height: auto;
+}
+
+#card-img {
+  width: 18.75rem;
+  height: auto;
+}
+
+.empower-container {
+  background-color: var(--tt-white);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.empower-card {
+  display: flex;
+  flex-direction: column;
+  width: 18.75rem;
+}
+
+.empower-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6.25rem;
+}
+
+.empower-subheading {
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 1rem;
+  color: var(--tt-red);
+}
+
+.empower-txt {
+  font-size: 1.125rem;
+}
+
+.empower-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-bottom: 3vh;
+}
+
+.spotlights-container {
+  height: 100vh;
+  background-color: var(--tt-grey);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+#spotlight-img {
+  width: 21.87500rem;
+  height: auto;
+}
+
+.spotlight-card {
+  width: 21.87500rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.25rem;
+}
+
+.spotlights-container {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.spotlight-headding{
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+
+.spotlight-subheading{
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--tt-red);
+  padding-top: 1rem;
+}
+
+.spotlight-txt{
+  font-size: 1.12500rem;
+  color: var(--tt-text-grey);
+}

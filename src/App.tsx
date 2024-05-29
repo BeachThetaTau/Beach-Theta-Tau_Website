@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Social from "./pages/Social.tsx";
@@ -22,7 +21,7 @@ import Apply from "./pages/Apply.tsx";
 }
 
 const App = () => (
-<Home/>
+<Service/>
 );
 
 export default App;
