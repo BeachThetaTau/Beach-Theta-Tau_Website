@@ -19,7 +19,7 @@ import Apply from "./pages/Apply.tsx";
 }
 
 const App = () => (
-<Professionalism/>
+<Apply/>
 );
 
 export default App;

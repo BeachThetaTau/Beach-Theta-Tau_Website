@@ -48,6 +48,7 @@
   gap: 10rem;
   background-color: #ececec;
   padding: 9rem 5rem 9rem 5rem;
+  flex-wrap: wrap;
 }
 
 .theta-tau-info {
@@ -74,6 +75,7 @@
   justify-content: center;
   gap: 5rem;
   padding: 13rem 5rem 13rem 5rem;
+  flex-wrap: wrap;
 }
 
 .xi-epsilon-info {

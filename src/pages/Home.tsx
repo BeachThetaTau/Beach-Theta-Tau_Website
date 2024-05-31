@@ -1,4 +1,3 @@
-import React from 'react';
 import './Home.css'; // Correct import for Home.css
 import NavBar from '../components/NavBar';
 import Button from '../components/Button';
