@@ -37,7 +37,7 @@ function Professionalism() {
           <div className="proff-card">
             <DisplayCarousel
               firstImage="BlankImg.png"
-              secondImage="BlankImg.png"
+              secondImage="BlankSquare.png"
               thirdImage="BlankImg.png"
             />
             <div>

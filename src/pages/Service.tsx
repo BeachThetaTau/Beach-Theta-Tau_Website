@@ -1,5 +1,4 @@
 import NavBar from "../components/NavBar";
-import DisplayCarousel from "../components/ThreeImgCarousel";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import "./Service.css";
@@ -8,6 +7,7 @@ function Service() {
   return (
     <>
       <NavBar />
+      <GenerateParallax fileName="Service.png" title="Service" />
 
       <div className="service-container">
         <div className="service-body">

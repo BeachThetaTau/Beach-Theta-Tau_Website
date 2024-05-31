@@ -1,51 +1,55 @@
 @import url("https://use.typekit.net/obn7dcx.css");
 
+:root {
+  --tt-red: #7f170e;
+}
 * {
   font-family: "alibaba-sans", sans-serif;
   font-size: 16px;
 }
 
-.social-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10rem;
-  height: 100vh;
-  align-items: center;
+#social-heading {
+  color: #545454;
+  font-size: 2.625rem;
+  font-weight: 700;
+  text-align: center;
 }
 
-.social-container-grey {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10rem;
-  height: 100vh;
-  align-items: center;
+#social-subtxt {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.social-heading-container {
   background-color: #ececec;
+  padding: 5.375vh 11.125vw 5.375vh 11.125vw;
 }
-.social-info {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 35rem;
-  padding-left: 10rem;
-}
-.social-heading {
-  font-size: 3rem;
-  color: #7f170e;
+
+.social-subheadding {
+  color: var(--tt-red);
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
 .social-txt {
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+
+.social-txt-container {
+  width: 31.25rem;
+}
+
+.social-body-container {
+  padding: 4.6875vh 11.125vw 4.6875vh 11.125vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .social-img {
-  padding-right: 10rem;
-}
-
-.center-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 33rem;
+  height: 25.1875rem;
+  object-fit: contain;
 }

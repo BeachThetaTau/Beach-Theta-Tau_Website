@@ -1,4 +1,5 @@
 .carousel-img{
     width: 25rem;
-    height: auto;
+    height: 25rem;
+    object-fit: contain;
 }
