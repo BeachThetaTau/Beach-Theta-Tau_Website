@@ -1,12 +1,36 @@
-.parallax-txt{
-    position: relative; 
-    left: 10rem;
-    top: 35rem;
-    color: #FFF;
-    width: 40rem;
-    font-size: 4.5rem;
-    font-weight: 700;
+.parallax-txt {
+  position: relative;
+  left: 10rem;
+  top: 35rem;
+  color: #FFF;
+  width: 40rem;
+  font-size: 4.5rem;
+  font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  .parallax-txt {
+    left: 8rem;
+    top: 25rem;
+    width: 35rem;
+    font-size: 4rem;
+  }
+}
 
+@media (max-width: 800px) {
+  .parallax-txt {
+    left: 5rem;
+    top: 20rem;
+    width: 30rem;
+    font-size: 3.5rem;
+  }
+}
 
+@media (max-width: 600px) {
+  .parallax-txt {
+    left: 3rem;
+    top: 15rem;
+    width: 25rem;
+    font-size: 3rem;
+  }
+}

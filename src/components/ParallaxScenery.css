@@ -1,18 +1,85 @@
-.img-txt{
-    position: relative; /* or absolute */
-    left: 6.25rem;
-    top: 29.8125rem;
-    color: #FFF;
-    width: 40rem;
+.parallax-container {
+  position: relative;
 }
 
-
-.img-txt p{
-    font-size: 1.25rem;
+.parallax-height {
+  height: 100vh;
 }
 
-.img-txt h1{
-    font-size: 2.625rem;
+@media (max-width: 1200px) {
+  .parallax-height {
+    height: 80vh;
+  }
 }
 
+@media (max-width: 800px) {
+  .parallax-height {
+    height: 60vh;
+  }
+}
 
+@media (max-width: 600px) {
+  .parallax-height {
+    height: 40vh;
+  }
+}
+
+.content {
+  position: absolute;
+  left: 6.25rem;
+  top: 29.8125rem;
+  color: #FFF;
+  width: 40rem;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    left: 3.125rem;
+    top: 23.8125rem;
+    width: 35rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    left: 1.625rem;
+    top: 18.8125rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    left: 1rem;
+    top: 10rem;
+    width: 25rem;
+  }
+}
+
+.img-txt p {
+  font-size: 1.25rem;
+}
+
+.img-txt h1 {
+  font-size: 2.625rem;
+}
+
+@media (max-width: 800px) {
+  .img-txt p {
+    font-size: 1rem;
+  }
+
+  .img-txt h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .img-txt p {
+    font-size: 0.875rem;
+  }
+
+  .img-txt h1 {
+    font-size: 1.75rem;
+  }
+}

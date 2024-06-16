@@ -5,29 +5,34 @@
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
+  flex-wrap: wrap; /* Add this to allow wrapping */
+}
+
+.company-logo {
+  width: 200px;
+  height: auto;
+}
+
+.image-list li {
+  margin-right: 1rem; /* Adjust margin as needed */
 }
 
 .image-list li:last-child {
   margin-right: 0;
 }
 
-.company-logo {
-  width: 200px; 
-  height: auto;
-}
-
 .fade-in-section {
   opacity: 0;
-  transition: opacity 0.25s ease-in-out; 
+  transition: opacity 0.25s ease-in-out;
 }
 
 .fade-in-list {
   opacity: 0;
-  transition: opacity 0.25s ease-in-out; 
+  transition: opacity 0.25s ease-in-out;
 }
 
 .fade-in-list:nth-child(1) {
-  transition-delay: 0.25s; 
+  transition-delay: 0.25s;
 }
 
 .fade-in-list:nth-child(2) {
@@ -35,11 +40,11 @@
 }
 
 .fade-in-list:nth-child(3) {
-  transition-delay: 0.75s; 
+  transition-delay: 0.75s;
 }
 
 .fade-in-list:nth-child(4) {
-  transition-delay: 1s; 
+  transition-delay: 1s;
 }
 
 .fade-in-section.fade-in-active {
@@ -48,4 +53,16 @@
 
 .fade-in-list.fade-in-active {
   opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .image-list {
+    justify-content: space-around; 
+  }
+  
+  .image-list li {
+    flex: 0 0 45%; 
+    margin-right: 0;
+    margin-bottom: 1rem; 
+  }
 }

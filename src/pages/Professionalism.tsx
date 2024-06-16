@@ -3,11 +3,13 @@ import DisplayCarousel from "../components/ThreeImgCarousel";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import FadeInList from "../components/FadeInList";
+import HamburgerMenu from "../components/HamburgerMenu";
 import "./Professionalism.css";
 
 function Professionalism() {
   return (
     <>
+    <HamburgerMenu/>
       <NavBar />
       <GenerateParallax
         fileName="Professionalism.png"
@@ -36,9 +38,9 @@ function Professionalism() {
         <div className="center-div">
           <div className="proff-card">
             <DisplayCarousel
-              firstImage="BlankImg.png"
-              secondImage="BlankSquare.png"
-              thirdImage="BlankImg.png"
+              firstImage="CarineGordilloIntern.png"
+              secondImage="AdamBhuiyanIntern.png"
+              thirdImage="MiaCastroIntern.png"
             />
             <div>
               <p className="proff-card-txt">

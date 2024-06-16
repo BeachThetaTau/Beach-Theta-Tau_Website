@@ -48,8 +48,51 @@
   align-items: center;
 }
 
-.social-img {
+.social-img-landscape {
   width: 33rem;
   height: 25.1875rem;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.social-img-portrate {
+  width: 25.1875rem;
+  height: 33rem;
+  object-fit: cover;
+}
+
+.social-mob {
+  display: none;
+}
+
+@media (max-width: 744px) {
+  .social {
+    display: none;
+  }
+
+  .social-mob {
+    display: block;
+  }
+
+  .social-img-landscape {
+    width: 20rem;
+    height: 15rem;
+
+  }
+  .social-img-portrate {
+    width: 18rem;
+    height: 24rem;
+  }
+
+  .social-body-container{
+    padding-bottom: 0;
+  }
+
+  .social-txt{
+    text-align: center;
+  }
+
+  .social-heading-container{
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
 }
