@@ -1,12 +1,15 @@
 import "./About.css";
 import NavBar from "../components/NavBar";
+import HamburgerMenu from "../components/HamburgerMenu";
 import GenerateParallax from "../components/PillarsParallax";
 import ResponsiveButton from "../components/ResponsiveButton";
 import Footer from "../components/Footer";
 
+
 function About() {
   return (
     <>
+      <HamburgerMenu/>
       <NavBar />
       <GenerateParallax 
       fileName="About.png" 

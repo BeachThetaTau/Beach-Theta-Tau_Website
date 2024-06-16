@@ -2,11 +2,13 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import RushTimeline from "../components/Timeline";
 import OutlinedButton from "../components/OutlinedButton";
+import HamburgerMenu from "../components/HamburgerMenu";
 import "./Apply.css";
 
 function Service() {
   return (
     <>
+      <HamburgerMenu/>
       <NavBar />
       <div className="recruitment-container-grey">
         <div className="recruitment-heading-container">

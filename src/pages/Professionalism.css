@@ -35,7 +35,7 @@
   flex-direction: row;
   background-color: #d8d8d8;
   padding: 4.0625rem 2.1875rem 4.0625rem 2.1875rem;
-  width: 66.625rem;
+  justify-content: center;
   border-radius: 1.875rem;
   align-items: center;
   margin: 4.6875rem 0 4.6875rem 0;
@@ -112,4 +112,30 @@
   background-color: #ECECEC;
   padding: 6.1875rem 11.5rem 6.1875rem 11.5rem;
 
+}
+
+
+@media (max-width: 1000px) {
+  .proff-line {
+    width: 100%;
+  }
+
+  .offering-headding{
+    font-size: 3rem;
+  }
+
+  .offerings{
+    padding: 0 1rem 0 1rem;
+  }
+  
+  .offerings-card-container{
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 766px) {
+  .proff-card-txt{
+    font-size: 12px;
+    width: 350px;
+  }
 }

@@ -24,6 +24,7 @@ const FadeInList: React.FC = () => {
   }, []);
 
   return (
+    <>
     <div className={`fade-in-section ${isInView ? 'fade-in-active' : ''}`} ref={sectionRef}>
       <ul className={`image-list fade-in-list ${isInView ? 'fade-in-active' : ''}`}>
         <li>
@@ -85,6 +86,8 @@ const FadeInList: React.FC = () => {
         </li>
       </ul>
     </div>
+    </>
+    
   );
 };
 
