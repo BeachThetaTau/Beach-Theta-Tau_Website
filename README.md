@@ -19,7 +19,7 @@ To get started with the development of the Theta Tau Xi Epsilon website, follow 
 1. Clone the repository: `git clone https://github.com/your-username/theta-tau-xi-epsilon-website.git`
 2. Navigate to the project directory: `cd theta-tau-xi-epsilon-website`
 3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
+4. Start the development server: `npm run dev`
 5. Open your browser and visit `http://localhost:3000` to view the website.
 
 ## Project Structure
