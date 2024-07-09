@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "./firebase";
+import { auth } from "./../firebase";
 import { signOut } from "firebase/auth";
 
 const Profile = () => {
@@ -23,8 +23,7 @@ const Profile = () => {
         <div className = "container">
             <div className = "row justify-content-center">
                 <div className = "col-md-4 text-center">
-                    <Link to = "/">Return home</Link>
-                    <p>Welcome <em className = "text-decoration-underline">{ user.email }</em>. You are logged in!</p>
+                    <p>Hi, <em className = "text-decoration-underline">{ user.email }</em>.</p>
                     <div className = "d-grid gap-2">
                         <button type = "submit" className = "btn btn-primary pt-3 pb-3" onClick = {(e) => logoutUser(e)}>Logout</button>
                     </div>                

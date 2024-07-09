@@ -5,11 +5,12 @@ import Social from "./pages/Social.tsx";
 import Professionalism from "./pages/Professionalism.tsx";
 import Service from "./pages/Service.tsx";
 import Apply from "./pages/Apply.tsx";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 
-import Layout from "./Layout";
-import Login from "./Login";
-import Signup from "./Signup";
-import Profile from "./Profile";
+import Layout from "./components/Layout.jsx";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 {
