@@ -38,7 +38,7 @@ const Layout = () => {
 
     return(
         <div className = "container-fluid">
-            <div className = "row justify-content-center mt-3">
+            <div className = "row justify-content-center">
             <nav className="navbar">
             <div className="logo"> <DisplayLogo/></div>
 
