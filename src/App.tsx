@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Social from "./pages/Social.tsx";
@@ -12,10 +12,11 @@ import Profile from "./pages/Profile";
 import Layout from "./components/Layout.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer.tsx";
+import HamburgerMenu from "./components/HamburgerMenu.tsx";
 
 {
-
-/*
+  /*
 <Home/>
 <About/>
 <Social/>

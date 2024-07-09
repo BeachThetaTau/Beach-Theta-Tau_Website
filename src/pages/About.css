@@ -30,7 +30,6 @@
   color: #545454;
   font-style: italic;
   font-weight: medium;
-  width: 55.4375rem;
   text-align: center;
 }
 
@@ -44,8 +43,8 @@
 .theta-tau-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: space-evenly;
+gap: 2rem;
   background-color: #ececec;
   padding: 9rem 5rem 9rem 5rem;
   flex-wrap: wrap;
@@ -99,4 +98,28 @@
 .founders {
   width: 36rem;
   height: 27rem;
+}
+
+@media (max-width: 766px){
+.our-moto-img{
+  width: 26.87500rem;
+  height: auto;
+}
+.founders-img{
+  width:20rem;
+  height: auto;
+
+}
+.theta-tau-container{
+  padding: 3rem 0 3rem 0;
+}
+
+.founders{
+  width: 21.87500rem;
+  height: auto;
+}
+
+.xi-epsilon-container{
+ padding: 2rem;
+}
 }

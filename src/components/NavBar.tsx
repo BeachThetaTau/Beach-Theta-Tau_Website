@@ -1,6 +1,8 @@
-import './NavBar.css';
-import OutlinedButton from './OutlinedButton';
-import DisplayLogo from './Logo';
+// This NavBar has been deprecated in favor of the Layout component -- its destruction (removal) is imminent. 
+
+import "./NavBar.css";
+import OutlinedButton from "./OutlinedButton";
+import DisplayLogo from "./Logo";
 
 const NavBar = () => {
   return (
@@ -23,5 +25,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-

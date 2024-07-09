@@ -19,8 +19,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  padding: 7rem 9.25rem 7.4375rem 8.8125rem;
   gap: 6.25rem;
   background-color: var(--tt-grey);
 }
@@ -34,10 +33,10 @@
   width: 34.75rem;
 }
 
-.service-txt{
-font-size: 1rem;
-font-weight: 500;
-color: var(--tt-text-grey);
+.service-txt {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--tt-text-grey);
 }
 
 .img-container-horizontal {
@@ -53,14 +52,21 @@ color: var(--tt-text-grey);
   gap: 1.5625rem;
 }
 
-#service-img {
+#cooking-img {
   width: 26.5625rem;
   height: auto;
 }
 
-#card-img {
+.service-img-square {
+  width: 12.5rem;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+.card-img {
   width: 18.75rem;
-  height: auto;
+  height: 18.75rem;
+  object-fit: cover;
 }
 
 .empower-container {
@@ -70,21 +76,20 @@ color: var(--tt-text-grey);
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  padding: 5.1875rem 12.1875rem 6.9375rem 12.1875rem;
 }
 
 .empower-card {
   display: flex;
   flex-direction: column;
   width: 18.75rem;
+  margin: 1rem;
 }
 
 .empower-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6.25rem;
 }
 
 .empower-subheading {
@@ -106,7 +111,7 @@ color: var(--tt-text-grey);
 }
 
 .spotlights-container {
-  height: 100vh;
+  padding: 5.0625rem 5.5625rem 5.0625rem 5.5625rem;
   background-color: var(--tt-grey);
   display: flex;
   flex-direction: column;
@@ -114,13 +119,14 @@ color: var(--tt-text-grey);
   justify-content: center;
 }
 
-#spotlight-img {
-  width: 21.87500rem;
-  height: auto;
+.spotlight-img {
+  width: 21.875rem;
+  height: 21.875rem;
+  object-fit: cover;
 }
 
 .spotlight-card {
-  width: 21.87500rem;
+  width: 21.875rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -141,20 +147,41 @@ color: var(--tt-text-grey);
   justify-content: center;
 }
 
-.spotlight-headding{
+.spotlight-headding {
   font-size: 2.5rem;
   font-weight: 900;
   padding-bottom: 1rem;
 }
 
-.spotlight-subheading{
+.spotlight-subheading {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--tt-red);
   padding-top: 1rem;
 }
 
-.spotlight-txt{
-  font-size: 1.12500rem;
+.spotlight-txt {
+  font-size: 1.125rem;
   color: var(--tt-text-grey);
+}
+
+@media (max-width: 766px) {
+  .service-container{
+    padding: 2rem;
+  }
+  .empower-container{
+    padding: 2rem;
+  }
+
+  #cooking-img {
+    width: 25rem;
+    height: auto;
+  }
+
+  .service-img-square{
+    width: 11.4rem;
+    height: 11.4rem;
+    object-fit: cover;
+  }
+
 }
