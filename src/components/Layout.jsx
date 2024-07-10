@@ -37,6 +37,7 @@ const Layout = () => {
     };
 
     return(
+        <div className="navbar-container">
         <div className = "container-fluid">
             <div className = "row justify-content-center">
             <nav className="navbar">
@@ -61,6 +62,7 @@ const Layout = () => {
             </nav>
                 <Outlet />
             </div>
+        </div>
         </div>
     )
 }
