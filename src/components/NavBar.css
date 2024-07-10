@@ -40,7 +40,7 @@ a:has(button) {
 }
 
 @media (max-width: 1049px) {
-  .navbar-container {
+  .navbar {
     display: none;
   }
 }
