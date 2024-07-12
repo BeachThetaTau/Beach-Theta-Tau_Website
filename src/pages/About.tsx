@@ -1,6 +1,5 @@
 import "./About.css";
 import NavBar from "../components/NavBar";
-import HamburgerMenu from "../components/HamburgerMenu";
 import GenerateParallax from "../components/PillarsParallax";
 import ResponsiveButton from "../components/ResponsiveButton";
 import Footer from "../components/Footer";
@@ -9,7 +8,6 @@ import Footer from "../components/Footer";
 function About() {
   return (
     <>
-      <HamburgerMenu/>
       <NavBar />
       <GenerateParallax 
       fileName="About.png" 
@@ -37,7 +35,8 @@ function About() {
             underscoring its dedication to quality education and engineering
             principles.
           </p>
-          <ResponsiveButton />
+          <a href="https://thetatau.org/" target = "blank"><ResponsiveButton /></a>
+          
         </div>
         <img src="TTFounders.png" alt="" className="founders-img" />
       </div>

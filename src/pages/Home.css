@@ -123,7 +123,7 @@
   width: 34.375rem;
   background-color: #d8d8d8;
   height: auto;
-  padding-left: 4.6875vw;
+  padding: 0 4.6875vw 0 4.6875vw;
 }
 
 .pillars-heading {
@@ -192,3 +192,4 @@
     padding: 1rem;
   }
 }
+

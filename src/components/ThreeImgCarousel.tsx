@@ -31,15 +31,15 @@ const DisplayCarousel: React.FC<DisplayCarouselProps> = ({
   return (
     <Carousel fade className='carousel-img'>
       <Carousel.Item interval={1000}>
-        <img src={firstImage} alt="First slide" className='carousel-img'/>
+        <img src={firstImage} alt={firstImage} className='carousel-img'/>
       </Carousel.Item>
       
       <Carousel.Item interval={1000}>
-        <img src={secondImage} alt="Second slide" className='carousel-img'/>
+        <img src={secondImage} alt={secondImage} className='carousel-img'/>
       </Carousel.Item>
 
       <Carousel.Item interval={1000}>
-        <img src={thirdImage} alt="Third slide" className='carousel-img'/>
+        <img src={thirdImage} alt={thirdImage} className='carousel-img'/>
       </Carousel.Item>
     </Carousel>
   );

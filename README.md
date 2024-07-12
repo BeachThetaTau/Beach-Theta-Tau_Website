@@ -1,12 +1,15 @@
 # Theta Tau Xi Epsilon Website
 
 ## Introduction
+
 Welcome to the README for creating the Theta Tau Xi Epsilon website using React.js! This guide will walk you through the steps of setting up the website and provide some important information for development.
 
 ## Project Overview
+
 This project is the repository for CSULB's Theta Tau Engineering Fraternity, Xi Epsilon chapter, built using React, Nodejs, and Firebase.
 
 ## Getting Started
+
 To get started with the development of the Theta Tau Xi Epsilon website, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/BeachThetaTau/Beach-Theta-Tau_Website.git`
@@ -16,6 +19,7 @@ To get started with the development of the Theta Tau Xi Epsilon website, follow 
 5. Open your browser and visit `http://localhost:5173` to view the website.
 
 ## Project Structure
+
 The project structure is organized as follows:
 
 ```
@@ -53,7 +57,8 @@ Beach-Theta-Tau_Website/
 - **`package.json`**: Configuration file for Node.js dependencies and scripts.
 
 ## Key Contributors
-- [Dalfodev](https://github.com/dalfodev): One of the creators of the Theta Tau Xi Epsilon website.
+
+- [Dalfodev](https://github.com/dalfodev): (Primarily) frontend developer of the Theta Tau Xi Epsilon Website.
 - [MarkCarsonDev](https://github.com/MarkCarsonDev): (Primarily) backend developer of the Theta Tau Xi Epsilon Website.
 
 Rah rah!

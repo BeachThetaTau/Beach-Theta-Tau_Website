@@ -1,15 +1,15 @@
 import "./Home.css"; // Correct import for Home.css
 import NavBar from "../components/NavBar";
-import HamburgerMenu from "../components/HamburgerMenu";
 import Button from "../components/Button";
 import ParallaxScenery from "../components/ParallaxScenery";
 import ResponsiveButton from "../components/ResponsiveButton";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <HamburgerMenu />
+
       <NavBar />
       <ParallaxScenery />
       <div className="gray-background">
@@ -33,7 +33,7 @@ function Home() {
             dedication, we foster fraternal fellowship, support professional
             growth, and serve our communities.
           </p>
-          <ResponsiveButton />
+          <Link to = "/about"><ResponsiveButton/></Link>
         </div>
         <img src="WhoAreWe.png" alt="Who Are We" className="who-are-we-img"/>
       </div>
@@ -83,7 +83,8 @@ function Home() {
               activities, philanthropic initiatives, and projects that benefit
               society and promote the welfare of others.
             </p>
-            <Button text="Learn More" />
+            <Link to = "/service"><Button text="Learn More" /></Link>
+            
           </li>
 
           <li className="pillars-elements">
@@ -99,7 +100,8 @@ function Home() {
               standards of ethics, integrity, and responsibility in every facet
               of their academic, personal, and professional endeavors.
             </p>
-            <Button text="Learn More" />
+            <Link to = "/professionalism"><Button text="Learn More" /></Link>
+
           </li>
 
           <li className="pillars-elements">
@@ -115,12 +117,12 @@ function Home() {
               where we can connect, collaborate, and grow together, both
               personally and professionally.
             </p>
-            <Button text="Learn More" />
+            <Link to = "/social"><Button text="Learn More" /></Link>
           </li>
         </ul>
       </div>
 
-      <img src="FillerPic.png" alt="Theta Tau Having Fun" className="end-pic" />
+      <img src="FillerPic.png" alt="Theta Tau Members Having Fun" className="end-pic" />
       <Footer />
     </>
   );

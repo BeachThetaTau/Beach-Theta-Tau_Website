@@ -382,7 +382,6 @@ DEMO
 .page__hint{
   display: block;
   line-height: 1.45;
-  margin-block-size: 1rem;
 }
 
 .menu_activated{

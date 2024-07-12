@@ -1,13 +1,12 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
-import HamburgerMenu from "../components/HamburgerMenu";
+import FamilyCarousel from "../components/FamilyCarousel";
 import "./Social.css";
 
 function Social() {
   return (
     <>
-      <HamburgerMenu />
       <NavBar />
       <GenerateParallax fileName="Social.png" title="Social" />
 
@@ -85,11 +84,7 @@ function Social() {
         </div>
 
         <div className="social-body-container">
-          <img
-            src="RoyalTigers.png"
-            alt="Family Picture"
-            className="social-img-landscape"
-          />
+          <FamilyCarousel/>
 
           <div className="social-txt-container">
             <h2 className="social-subheadding">Big-Littles</h2>
@@ -170,13 +165,9 @@ function Social() {
         <div className="social-body-container">
           <div className="social-txt-container">
             <h2 className="social-subheadding">Big-Littles</h2>
-            <img
-              src="RoyalTigers.png"
-              alt="Family Picture"
-              className="social-img-landscape"
-            />
 
-            <p className="social-txt">
+            <FamilyCarousel/>
+            <p className="social-txt" style={{ paddingBottom: '5vh' }}>
               In our fraternity, we cherish the concept of frat families, where
               bonds are not just formed but strengthened for a lifetime. Each
               member is part of a unique frat family, fostering a sense of

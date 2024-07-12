@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HamburgerMenu.css';
 
 const HamburgerMenu = () => {
@@ -8,28 +9,32 @@ const HamburgerMenu = () => {
     setIsActivated(!isActivated);
   };
 
+  const closeMenu = () => {
+    setIsActivated(false);
+  };
+
   return (
     <div className="hamburger-menu">
-    <div className={`menu ${isActivated ? 'menu_activated' : ''}`}>
-      <nav id="main-menu" className="menu__nav">
-        <ul className="menu__list ra-list">
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">About</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Meet Us</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Social</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Professionalism</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Service</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Apply</a></li>
-          <li className="menu__group"><a href="#0" className="menu__link ra-link">Log In</a></li>
-        </ul>
-      </nav>
-      <button className="menu__toggle ra-button" type="button" aria-controls="main-menu" onClick={toggleMenu}>
-        <span className="menu__hamburger uia-hamburger">
-          <span className="menu__hamburger-label uia-hamburger__label">
-            <span className="menu__toggle-hint ha-screen-reader">Open menu</span>
+      <div className={`menu ${isActivated ? 'menu_activated' : ''}`}>
+        <nav id="main-menu" className="menu__nav">
+          <ul className="menu__list ra-list">
+            <li className="menu__group"><Link to="/about" className="menu__link ra-link" onClick={closeMenu}>About</Link></li>
+            <li className="menu__group"><Link to="/under-construction" className="menu__link ra-link" onClick={closeMenu}>Meet Us</Link></li>
+            <li className="menu__group"><Link to="/social" className="menu__link ra-link" onClick={closeMenu}>Social</Link></li>
+            <li className="menu__group"><Link to="/professionalism" className="menu__link ra-link" onClick={closeMenu}>Professionalism</Link></li>
+            <li className="menu__group"><Link to="/service" className="menu__link ra-link" onClick={closeMenu}>Service</Link></li>
+            <li className="menu__group"><Link to="/apply" className="menu__link ra-link" onClick={closeMenu}>Apply</Link></li>
+            <li className="menu__group"><Link to="/login" className="menu__link ra-link" onClick={closeMenu}>Log In</Link></li>
+          </ul>
+        </nav>
+        <button className="menu__toggle ra-button" type="button" aria-controls="main-menu" onClick={toggleMenu}>
+          <span className="menu__hamburger uia-hamburger">
+            <span className="menu__hamburger-label uia-hamburger__label">
+              <span className="menu__toggle-hint ha-screen-reader">Open menu</span>
+            </span>
           </span>
-        </span>
-      </button>
-    </div>
+        </button>
+      </div>
     </div>
   );
 };

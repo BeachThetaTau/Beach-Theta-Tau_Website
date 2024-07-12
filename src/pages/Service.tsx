@@ -1,13 +1,11 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
-import HamburgerMenu from "../components/HamburgerMenu";
 import "./Service.css";
 
 function Service() {
   return (
     <>
-    <HamburgerMenu/>
       <NavBar />
       <GenerateParallax fileName="Service.png" title="Service" />
 

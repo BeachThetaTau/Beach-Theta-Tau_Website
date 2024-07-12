@@ -3,13 +3,11 @@ import DisplayCarousel from "../components/ThreeImgCarousel";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import FadeInList from "../components/FadeInList";
-import HamburgerMenu from "../components/HamburgerMenu";
 import "./Professionalism.css";
 
 function Professionalism() {
   return (
     <>
-    <HamburgerMenu/>
       <NavBar />
       <GenerateParallax
         fileName="Professionalism.png"

@@ -130,7 +130,8 @@
 .recruitment-resources-txt{
     font-size: 1.12500rem;
     font-weight: medium;
-    padding-top: 5vh;
+    padding: 5vh 10vw 0 10vw;
+    
 }
 
 .recruitment-resources-heading{
@@ -145,6 +146,17 @@
     font-weight: bold;
     font-size: 1.12500rem;
     padding-top: 3vh;
+}
+
+#Instagram {
+    color: #F0bF4C;
+    font-weight: 700;
+
+}
+
+.recruitment-contact a {
+    color: black;
+    text-decoration: underline;
 }
 
 @media (max-width: 956px) {

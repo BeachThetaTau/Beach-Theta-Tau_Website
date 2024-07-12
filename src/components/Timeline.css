@@ -2,8 +2,6 @@
   padding-left: 15vw;
 }
 
-
-
 .timeline {
   margin: 0 auto;
   position: relative;
@@ -65,6 +63,11 @@
 
 .event-date {
   display: none;
+}
+
+#professional-attire-link{
+color: black;
+text-decoration: underline;
 }
 
 

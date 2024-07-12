@@ -8,6 +8,7 @@ import Apply from "./pages/Apply.tsx";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
+import UnderConstruction from "./pages/UnderConstruction.tsx";
 
 import Layout from "./components/Layout.jsx";
 
@@ -40,6 +41,9 @@ const App = () => {
             <Route path = "/professionalism" element = { <Professionalism></Professionalism> }></Route>
             <Route path = "/service" element = { <Service></Service> }></Route>
             <Route path = "/apply" element = { <Apply></Apply> }></Route>
+            <Route path = "/under-construction" element = { <UnderConstruction></UnderConstruction> }></Route>
+            <Route path = "/apply" element = { <Apply></Apply> }></Route>
+          
           </Route>
       </Routes>
     </BrowserRouter>

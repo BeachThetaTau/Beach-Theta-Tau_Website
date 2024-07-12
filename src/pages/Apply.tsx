@@ -2,13 +2,12 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import RushTimeline from "../components/Timeline";
 import OutlinedButton from "../components/OutlinedButton";
-import HamburgerMenu from "../components/HamburgerMenu";
+
 import "./Apply.css";
 
 function Service() {
   return (
     <>
-      <HamburgerMenu/>
       <NavBar />
       <div className="recruitment-container-grey">
         <div className="recruitment-heading-container">
@@ -29,7 +28,7 @@ function Service() {
               We welcome applications from individuals at any stage of their
               academic or professional journey. Please keep an eye out for
               application resources, including those currently accessible on our
-              Instagram stories and highlighted takeovers.
+              <a href="https://www.instagram.com/beachthetatau/" target="blank"><span id = "Instagram" className="recruitment-info-txt"> Instagram</span></a> stories and highlighted takeovers.
             </p>
             <OutlinedButton text="Application" fontSize="1.125rem" />
           </div>
@@ -53,7 +52,7 @@ function Service() {
         <p className="rush-timeline">Rush Timeline</p>
         <RushTimeline />
 
-        <div className="attire-guidelines-container">
+        <div className="attire-guidelines-container" id = "attire-guidelines">
           <p className="attire-guidelines-heading">Attire Guidelines</p>
           <p className="attire-guidelines-subheading">Buisiness Casual</p>
 
@@ -110,8 +109,8 @@ function Service() {
             time.
             <br />
             <p className="recruitment-contact">
-              Theta Tau Xi-Epsilon Email:{" "}
-              <strong>beachthetatau@gmail.com</strong>
+              Theta Tau Xi-Epsilon Email:
+              <a href="mailto:beachthetatau@gmail.com" className="recruitment-contact"><strong> beachthetatau@gmail.com</strong></a>
             </p>
           </p>
         </div>

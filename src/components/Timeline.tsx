@@ -44,7 +44,7 @@ const RushTimeline = () => {
             <p className="event-date">xx/xx - 7:00 PM</p>
             <p className="event-location">Horn Center</p>
             <p className="event-description">
-              Dress in your professional attire for a series of friendly speed
+              Dress in your <a href="#attire-guidelines" id ="professional-attire-link">professional attire</a> for a series of friendly speed
               interviews and uncover how Theta Tau has empowered our alumni in
               their professional journeys. Engage in interactive sessions where
               we will impart essential professional skills to enhance your

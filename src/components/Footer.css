@@ -64,12 +64,13 @@
     padding-top: 0.5rem;
 }
 
+a:link{
+    text-decoration: none;
+}
 
 
 @media (max-width: 1049px) {
     .footer-container {
         display: none;
     }
-
-
 }

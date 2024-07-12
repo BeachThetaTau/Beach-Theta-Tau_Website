@@ -21,13 +21,14 @@
   font-size: 2.5rem;
   font-weight: 900;
   text-align: center;
+  padding: 0 3vw 0 3vw;
 }
 
 .proff-txt {
   font-size: 1.25rem;
   color: var(--tt-text-grey);
   text-align: center;
-  padding-top: 1rem;
+  padding: 1 3vw 0 3vw;
 }
 
 .proff-card {
@@ -66,6 +67,7 @@
   font-size: 2.25rem;
   color: var(--tt-red);
   font-weight: 700;
+  padding: 5vw;
 }
 
 .offerings-card {
@@ -101,11 +103,13 @@
 .offering-headding{
   font-size: 3.5rem;
   font-weight: 700;
+  padding: 0 5vw 0 5vw;
 }
 
 .offering-subtxt{
   font-size: 1.25rem;
   padding-top: 1rem;
+  padding: 0 5vw 0 5vw;
 }
 
 .offerings{
