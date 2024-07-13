@@ -173,6 +173,15 @@
     width: 80vw;
     padding: 1rem;
   }
+
+}
+
+@media (max-width: 1122px){
+  .who-are-we-txt-container {
+    width: 50rem;
+    padding-bottom: 2vh;
+
+  }
 }
 
 @media (max-width: 744px) {
@@ -192,4 +201,5 @@
     padding: 1rem;
   }
 }
+
 

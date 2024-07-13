@@ -1,6 +1,7 @@
-.container{
-    background-color: #ececec;
+.container {
+  background-color: #ececec;
 }
+
 .main-title {
   text-align: center;
   margin-top: 4rem;
@@ -15,7 +16,7 @@
   font-size: 7rem;
   text-transform: uppercase;
   font-weight: 800;
-  color: #7F170E;
+  color: #7f170e;
 }
 
 .main-title h2 {
@@ -101,12 +102,24 @@ svg {
   }
 }
 
+/* Styles for screens 400px and up */
+@media (min-width: 300px) {
+  .main-title h1 {
+    font-size: 4rem;
+  }
+
+  .main-title h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Styles for screens 640px and up */
 @media (min-width: 640px) {
   .main-title h1 {
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 700;
-    color: #7F170E;
+    color: #7f170e;
   }
 
   .main-title h2 {
@@ -116,12 +129,13 @@ svg {
   }
 }
 
+/* Styles for screens 768px and up */
 @media (min-width: 768px) {
   .main-title h1 {
     font-size: 6rem;
     text-transform: uppercase;
     font-weight: 800;
-    color: #7F170E;
+    color: #7f170e;
   }
 
   .main-title h2 {
@@ -131,12 +145,13 @@ svg {
   }
 }
 
+/* Styles for screens 1024px and up */
 @media (min-width: 1024px) {
   .main-title h1 {
     font-size: 7rem;
     text-transform: uppercase;
     font-weight: 900;
-    color: #7F170E;
+    color: #7f170e;
   }
 
   .main-title h2 {
@@ -146,12 +161,13 @@ svg {
   }
 }
 
+/* Styles for screens 1200px and up */
 @media (min-width: 1200px) {
   .main-title h1 {
     font-size: 8rem;
     text-transform: uppercase;
     font-weight: 900;
-    color: #7F170E;
+    color: #7f170e;
   }
 
   .main-title h2 {

@@ -49,6 +49,7 @@ const Layout = () => {
             </div>
 
             <div className="links">
+              <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/under-construction">Meet Us</Link>
               <Link to="/social">Social</Link>

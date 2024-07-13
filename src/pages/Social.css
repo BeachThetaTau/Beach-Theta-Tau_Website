@@ -79,15 +79,12 @@
 
   .social-txt-container {
     width: auto;
-  }
-  
-  .social-mob .social-body-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text content */
+    align-items: center; 
+    
   }
-
+  
   .social-img-landscape {
     width: 20rem;
     height: 15rem;

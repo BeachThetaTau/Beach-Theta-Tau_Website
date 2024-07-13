@@ -18,6 +18,7 @@ const HamburgerMenu = () => {
       <div className={`menu ${isActivated ? 'menu_activated' : ''}`}>
         <nav id="main-menu" className="menu__nav">
           <ul className="menu__list ra-list">
+            <li className="menu__group"><Link to="/" className="menu__link ra-link" onClick={closeMenu}>Home</Link></li>
             <li className="menu__group"><Link to="/about" className="menu__link ra-link" onClick={closeMenu}>About</Link></li>
             <li className="menu__group"><Link to="/under-construction" className="menu__link ra-link" onClick={closeMenu}>Meet Us</Link></li>
             <li className="menu__group"><Link to="/social" className="menu__link ra-link" onClick={closeMenu}>Social</Link></li>

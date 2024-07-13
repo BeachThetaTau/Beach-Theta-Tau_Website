@@ -65,6 +65,12 @@ gap: 2rem;
   width: 25rem;
 }
 
+@media (max-width: 600px) {
+  .theta-tau-txt {
+    width: auto;
+  }
+}
+
 .xi-epsilon-container {
   display: flex;
   flex-direction: row;
@@ -99,11 +105,11 @@ gap: 2rem;
 
 @media (max-width: 766px){
   .our-moto-img{
-    width: 26.87500rem;
+    width: 100vw;
     height: auto;
   }
   .founders-img{
-    width:20rem;
+    width:90vw;
     height: auto;
 
   }

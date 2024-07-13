@@ -43,7 +43,7 @@
 @media (max-width: 800px) {
   .content {
     left: 1.625rem;
-    top: 18.8125rem;
+    top: 15rem;
     width: 30rem;
   }
 }
@@ -51,8 +51,9 @@
 @media (max-width: 600px) {
   .content {
     left: 1rem;
-    top: 10rem;
+    top: 8rem;
     width: 25rem;
+
   }
 }
 

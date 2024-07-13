@@ -12,7 +12,7 @@
   .parallax-txt {
     left: 8rem;
     top: 25rem;
-    width: 35rem;
+    width: auto;
     font-size: 4rem;
   }
 }
@@ -21,16 +21,16 @@
   .parallax-txt {
     left: 5rem;
     top: 20rem;
-    width: 30rem;
+    width: auto;
     font-size: 3.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .parallax-txt {
-    left: 3rem;
-    top: 15rem;
-    width: 25rem;
-    font-size: 3rem;
+    left: 2rem;
+    top: 10rem;
+    width: auto;
+    font-size: 2.5rem;
   }
 }

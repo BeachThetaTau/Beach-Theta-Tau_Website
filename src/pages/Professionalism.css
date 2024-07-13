@@ -41,8 +41,8 @@
   align-items: center;
   margin: 4.6875rem 0 4.6875rem 0;
   flex-wrap: wrap;
-  
 }
+
 
 .proff-card-txt {
   font-size: 1.125rem;
@@ -50,6 +50,18 @@
   padding-left: 2rem;
   width: 35.5rem;
 }
+
+@media (max-width: 600px) {
+  .proff-card-txt {
+    width: 10rem;
+    font-size: 1rem;
+
+  }
+  .proff-card{
+    padding: 2rem 0 2rem 0  
+  }
+}
+
 .center-div {
   display: flex;
   justify-content: center;

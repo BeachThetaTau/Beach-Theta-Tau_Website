@@ -39,7 +39,7 @@ a:has(button) {
   background-color: black; 
 }
 
-@media (max-width: 1056px) {
+@media (max-width: 1109px) {
   .navbar-container {
     display: none;
   }
