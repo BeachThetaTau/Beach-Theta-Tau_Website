@@ -10,7 +10,7 @@ function Professionalism() {
     <>
       <NavBar />
       <GenerateParallax
-        fileName="Professionalism.png"
+        fileName="Professionalism.jpg"
         title="Professionalism"
       />
 
@@ -36,9 +36,9 @@ function Professionalism() {
         <div className="center-div">
           <div className="proff-card">
             <DisplayCarousel
-              firstImage="CarineGordilloIntern.png"
-              secondImage="AdamBhuiyanIntern.png"
-              thirdImage="MiaCastroIntern.png"
+              firstImage="CarineGordilloIntern.jpg"
+              secondImage="AdamBhuiyanIntern.jpg"
+              thirdImage="MiaCastroIntern.jpg"
             />
             <div>
               <p className="proff-card-txt">

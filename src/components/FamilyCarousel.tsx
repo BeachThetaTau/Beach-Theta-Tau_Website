@@ -21,19 +21,19 @@ const FamilyCarousel = () => {
     <Carousel fade className='family-carousel-img'>
       
       <Carousel.Item interval={1500}>
-        <img src="Instigators.png" alt="Instigators" className='family-carousel-img'/>
+        <img src="Instigators.jpg" alt="Instigators" className='family-carousel-img'/>
       </Carousel.Item>
 
       <Carousel.Item interval={1500}>
-        <img src="RoyalTigers.png" alt="Royal Tigers" className='family-carousel-img'/>
+        <img src="RoyalTigers.jpg" alt="Royal Tigers" className='family-carousel-img'/>
       </Carousel.Item>
 
       <Carousel.Item interval={1500}>
-        <img src="Candela.png" alt="Candela" className='family-carousel-img'/>
+        <img src="Candela.jpg" alt="Candela" className='family-carousel-img'/>
       </Carousel.Item>
 
       <Carousel.Item interval={1500}>
-        <img src="B2.png" alt="B2" className='family-carousel-img'/>
+        <img src="B2.jpg" alt="B2" className='family-carousel-img'/>
       </Carousel.Item>
 
     </Carousel>

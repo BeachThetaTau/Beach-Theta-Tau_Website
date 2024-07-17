@@ -1,5 +1,5 @@
 // vite.config.ts
-import { defineConfig } from "file:///Users/dominicalfonso/Desktop/Beach-Theta-Tau-Website%20/node_modules/vite/dist/node/index.js";
+import { defineConfig } from "file:///Users/dominicalfonso/Beach-Theta-Tau-Website%20/node_modules/vite/dist/node/index.js";
 import react from "file:///Users/dominicalfonso/Desktop/Beach-Theta-Tau-Website%20/node_modules/@vitejs/plugin-react/dist/index.mjs";
 var vite_config_default = defineConfig({
   plugins: [react()]

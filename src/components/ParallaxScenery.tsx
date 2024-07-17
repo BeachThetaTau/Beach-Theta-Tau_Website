@@ -25,7 +25,7 @@ const ParallaxScenery = () => {
   }, []);
 
   const parallaxProps: ParallaxProps = {
-    bgImage: 'Scenery.png',
+    bgImage: 'Scenery.jpg',
     strength: 500,
     style: { height: parallaxHeight },
   };

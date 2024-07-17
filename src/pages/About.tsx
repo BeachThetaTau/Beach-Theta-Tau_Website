@@ -10,7 +10,7 @@ function About() {
     <>
       <NavBar />
       <GenerateParallax 
-      fileName="About.png" 
+      fileName="About.jpg" 
       title="About" />
 
       <div className="our-moto">
@@ -38,7 +38,7 @@ function About() {
           <a href="https://thetatau.org/" target = "blank"><ResponsiveButton /></a>
           
         </div>
-        <img src="TTFounders.png" alt="" className="founders-img" />
+        <img src="TTFounders.jpg" alt="" className="founders-img" />
       </div>
 
       <div className="xi-epsilon-container">
@@ -55,7 +55,7 @@ function About() {
             Theta Tau.
           </p>
         </div>
-        <img src="Founders.png" alt="founders picture" className="founders" />
+        <img src="Founders.jpg" alt="Xi Epsilon founders picture" className="founders" />
       </div>
 
       <Footer />

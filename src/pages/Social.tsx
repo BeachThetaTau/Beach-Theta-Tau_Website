@@ -8,7 +8,7 @@ function Social() {
   return (
     <>
       <NavBar />
-      <GenerateParallax fileName="Social.png" title="Social" />
+      <GenerateParallax fileName="Social.jpg" title="Social" />
 
       <div className="social-heading-container">
         <div className="social-heading">
@@ -37,7 +37,7 @@ function Social() {
             </p>
           </div>
           <img
-            src="Retreat.png"
+            src="Retreat.jpg"
             alt="Retreat Image"
             className="social-img-landscape"
           />
@@ -45,7 +45,7 @@ function Social() {
 
         <div className="social-body-container">
           <img
-            src="Regionals.png"
+            src="Regionals.jpg"
             alt="Regionals Image"
             className="social-img-landscape"
           />
@@ -77,7 +77,7 @@ function Social() {
             </p>
           </div>
           <img
-            src="IMSports.png"
+            src="IMSports.jpg"
             alt="Intramural Sports Image"
             className="social-img-portrate"
           />
@@ -107,7 +107,7 @@ function Social() {
           <div className="social-txt-container">
             <h2 className="social-subheadding">Retreats</h2>
             <img
-              src="Retreat.png"
+              src="Retreat.jpg"
               alt="Retreat Image"
               className="social-img-landscape"
             />
@@ -126,7 +126,7 @@ function Social() {
           <div className="social-txt-container">
             <h2 className="social-subheadding">Regionals</h2>
             <img
-              src="Regionals.png"
+              src="Regionals.jpg"
               alt="Regionals Image"
               className="social-img-landscape"
             />
@@ -146,7 +146,7 @@ function Social() {
           <div className="social-txt-container">
             <h2 className="social-subheadding">Intramural Sports</h2>
             <img
-              src="IMSports.png"
+              src="IMSports.jpg"
               alt="Intramural Sports Image"
               className="social-img-portrate"
             />

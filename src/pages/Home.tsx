@@ -35,7 +35,7 @@ function Home() {
           </p>
           <Link to = "/about"><ResponsiveButton/></Link>
         </div>
-        <img src="WhoAreWe.png" alt="Who Are We" className="who-are-we-img"/>
+        <img src="WhoAreWe.jpg" alt="Who Are We" className="who-are-we-img"/>
       </div>
 
       <div className="achievements-container">
@@ -122,7 +122,7 @@ function Home() {
         </ul>
       </div>
 
-      <img src="FillerPic.png" alt="Theta Tau Members Having Fun" className="end-pic" />
+      <img src="FillerPic.jpg" alt="Theta Tau Members Having Fun" className="end-pic" />
       <Footer />
     </>
   );

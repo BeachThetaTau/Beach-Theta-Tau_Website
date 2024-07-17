@@ -7,7 +7,7 @@ function Service() {
   return (
     <>
       <NavBar />
-      <GenerateParallax fileName="Service.png" title="Service" />
+      <GenerateParallax fileName="Service.jpg" title="Service" />
 
       <div className="service-container">
         <div className="service-body">
@@ -35,18 +35,18 @@ function Service() {
         <div className="img-container-verticle">
           <div className="img-container-horizontal">
             <img
-              src="Food.png"
+              src="Food.jpg"
               alt="Donating at Food Drive"
               className="service-img-square"
             />
             <img
-              src="Prepping.png"
+              src="Prepping.jpg"
               alt="Blank Square"
               className="service-img-square"
               id = "prepping-food"
             />
           </div>
-          <img src="Cooking.png" alt="Cooking" id="cooking-img" />
+          <img src="Cooking.jpg" alt="Cooking" id="cooking-img" />
         </div>
       </div>
 
@@ -57,7 +57,7 @@ function Service() {
 
         <div className="empower-card-container">
           <div className="empower-card">
-            <img src="Volunteering.png" alt="Blank Square" className="card-img" />
+            <img src="Volunteering.jpg" alt="Blank Square" className="card-img" />
             <h2 className="empower-subheading">Volunteer</h2>
             <p className="empower-txt">
               Through our collaborative efforts with fellow volunteers, we
@@ -67,7 +67,7 @@ function Service() {
           </div>
 
           <div className="empower-card">
-            <img src="Donation.png" alt="Blank Square" className="card-img" />
+            <img src="Donation.jpg" alt="Blank Square" className="card-img" />
             <h2 className="empower-subheading">Donating Meals</h2>
             <p className="empower-txt">
               Through our meal donation initiatives, we're making a tangible
@@ -77,7 +77,7 @@ function Service() {
           </div>
 
           <div className="empower-card">
-            <img src="Conservation.png" alt="Blank Square" className="card-img" />
+            <img src="Conservation.jpg" alt="Blank Square" className="card-img" />
             <h2 className="empower-subheading">Conservation Efforts</h2>
             <p className="empower-txt">
               Through our dedicated conservation efforts alongside passionate
@@ -93,7 +93,7 @@ function Service() {
 
         <div className="spotlight-card-container">
           <div className="spotlight-card">
-            <img src="BeachCleanUp.png" alt="" className="spotlight-img" />
+            <img src="BeachCleanUp.jpg" alt="" className="spotlight-img" />
             <h2 className="spotlight-subheading">Beach Clean-Up</h2>
             <p className="spotlight-txt">
               Teaming up with our local USC chapter, we embarked on a beach
@@ -104,7 +104,7 @@ function Service() {
           </div>
 
           <div className="spotlight-card">
-            <img src="MesaDay.png" alt="" className="spotlight-img" />
+            <img src="MesaDay.jpg" alt="" className="spotlight-img" />
             <h2 className="spotlight-subheading">Mesa Day</h2>
             <p className="spotlight-txt">
               As part of Nu class's process, they fully engage in Mesa Day,
@@ -114,7 +114,7 @@ function Service() {
           </div>
 
           <div className="spotlight-card">
-            <img src="SoupKitchen.png" alt="" className="spotlight-img" />
+            <img src="SoupKitchen.jpg" alt="" className="spotlight-img" />
             <h2 className="spotlight-subheading">Soup Kitchen</h2>
             <p className="spotlight-txt">
               We volunteered at a soup kitchen as part of our commitment to
