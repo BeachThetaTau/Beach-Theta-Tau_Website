@@ -99,7 +99,8 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
-  padding-top: 1rem;
+  padding: 1rem 0 5vh 0;
+
 }
 
 .offering-card-heading {

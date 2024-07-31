@@ -36,6 +36,10 @@ const FamilyCarousel = () => {
         <img src="B2.jpg" alt="B2" className='family-carousel-img'/>
       </Carousel.Item>
 
+      <Carousel.Item interval={1500}>
+        <img src="Traitors.jpg" alt="Traitors" className='family-carousel-img'/>
+      </Carousel.Item>
+
     </Carousel>
   );
 };

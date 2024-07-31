@@ -3,6 +3,7 @@ import DisplayCarousel from "../components/ThreeImgCarousel";
 import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import FadeInList from "../components/FadeInList";
+import Logos from "../components/LogoCarousel";
 import "./Professionalism.css";
 
 function Professionalism() {
@@ -63,6 +64,7 @@ function Professionalism() {
         <div className="proff-line" />
         <h2 className="proff-subheading">WHERE TT CAN TAKE YOU</h2>
         <FadeInList />
+        <Logos />
 			  </div>
 
         <div className="offerings">

@@ -5,7 +5,6 @@
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
-  flex-wrap: wrap; /* Add this to allow wrapping */
 }
 
 .company-logo {
@@ -56,13 +55,7 @@
 }
 
 @media (max-width: 1000px) {
-  .image-list {
-    justify-content: space-around; 
-  }
-  
-  .image-list li {
-    flex: 0 0 45%; 
-    margin-right: 0;
-    margin-bottom: 1rem; 
+  .FadeInList{
+    display: none;
   }
 }
