@@ -13,10 +13,10 @@ function About() {
       fileName="About.jpg" 
       title="About" />
 
-      <div className="our-moto">
-        <img src="Hammer-and-tongs.png" alt="" className="our-moto-img" />
-        <p className="our-moto-heading">OUR MOTO</p>
-        <p className="our-moto-verse">
+      <div className="our-motto">
+        <img src="Hammer-and-tongs.png" alt="" className="our-motto-img" />
+        <p className="our-motto-heading">OUR MOTTO</p>
+        <p className="our-motto-verse">
           "Whatsoever thy hand findeth to do, do it with thy might something"
         </p>
         <p className="our-motto-cite">- Ecclesiastes 9:10</p>

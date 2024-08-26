@@ -5,24 +5,24 @@
   font-size: 16px;
 }
 
-.our-moto {
+.our-motto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.our-moto-img {
+.our-motto-img {
   width: 30rem;
   height: 15.7rem;
 }
 
-.our-moto-heading {
+.our-motto-heading {
   font-size: 1.75rem;
   font-weight: medium;
   color: #7f170e;
 }
 
-.our-moto-verse {
+.our-motto-verse {
   font-size: 2.625rem;
   color: #545454;
   font-style: italic;
@@ -104,7 +104,7 @@ gap: 2rem;
 }
 
 @media (max-width: 766px){
-  .our-moto-img{
+  .our-motto-img{
     width: 100vw;
     height: auto;
   }

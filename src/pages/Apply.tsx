@@ -30,7 +30,8 @@ function Service() {
               application resources, including those currently accessible on our
               <a href="https://www.instagram.com/beachthetatau/" target="blank"><span id = "Instagram" className="recruitment-info-txt"> Instagram</span></a> stories and highlighted takeovers.
             </p>
-            <OutlinedButton text="Application" fontSize="1.125rem" />
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSXSPNIAb9oN6wKzl0ozwQtK1sp8ri82g_bn3SfcBPOBS3gA/viewform" target = "blank"><OutlinedButton text="Application" fontSize="1.125rem" /></a>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ console.log(process.env.VITE_PUBLIC)
 // Your web app's Firebase configuration
 const firebaseConfig = {
   
-  apiKey: process.env.FIREBASE_API,
+  apiKey: "AIzaSyAucirYbu-389E27WERw9Zk0d2BJ18A1pU",
   authDomain: "xiepsilonmanager.firebaseapp.com",
   projectId: "xiepsilonmanager",
   storageBucket: "xiepsilonmanager.appspot.com",
