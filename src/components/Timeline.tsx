@@ -19,7 +19,7 @@ const RushTimeline = () => {
           <li className="event" data-date="9/10 - 7:00 PM">
             <p className="event-name">ENGINEERING NIGHT</p>
             <p className="event-date">9/10 - 7:00 PM</p>
-            <p className="event-location">Horn Center</p>
+            <p className="event-location">Health & Human Services Building</p>
             <p className="event-description">
               Connect with fellow rushees and collaborate alongside our
               brothers, showcasing your engineering skills and expertise.
@@ -29,7 +29,7 @@ const RushTimeline = () => {
           <li className="event" data-date="9/11 - 7:00 PM">
             <p className="event-name">PROFFESSIONAL NIGHT</p>
             <p className="event-date">9/11 - 7:00 PM</p>
-            <p className="event-location">Horn Center</p>
+            <p className="event-location">Health & Human Services Building</p>
             <p className="event-description">
               Dress in your professional attire for a series of friendly speed
               interviews and uncover how Theta Tau has empowered our alumni in
@@ -42,7 +42,7 @@ const RushTimeline = () => {
           <li className="event" data-date="9/12 - 7:00 PM">
             <p className="event-name">GAME NIGHT</p>
             <p className="event-date">9/12 - 7:00 PM</p>
-            <p className="event-location">Horn Center</p>
+            <p className="event-location">Health & Human Services Building</p>
             <p className="event-description">
               Dress in your <a href="#attire-guidelines" id ="professional-attire-link">professional attire</a> for a series of friendly speed
               interviews and uncover how Theta Tau has empowered our alumni in
