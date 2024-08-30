@@ -77,7 +77,7 @@
 .achievements-container {
   background-color: #7f170e;
   color: #f9f9f9;
-  padding: 3rem 1rem 3rem 1rem;
+  padding: 3rem 0 3rem 1rem;
 }
 
 .achievements {
@@ -113,55 +113,71 @@
   font-size: 1.625rem;
 }
 
-.pillars-container {
+.our-pillars{
   display: flex;
   flex-direction: row;
+  padding: 0;
+  margin: 0;
 }
 
-.pillars-intro {
-  color: #202735;
-  width: 34.375rem;
-  background-color: #d8d8d8;
-  height: auto;
-  padding: 0 4.6875vw 0 4.6875vw;
+.pillars-intro{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #D8D8D8;
+  position: relative;
+  left: -10px;
+  }
+  
+
+.pillars-intro-txt-container{
+padding-left: 5vw;
+padding-right: 5vw;
+padding-top: 15vh;
 }
 
-.pillars-heading {
+.pillars-subtitle{
   font-size: 1.75rem;
-  padding: 3.625rem 0 3.625rem 0;
 }
 
-.pillars-description {
-  font-size: 2.625rem;
+.pillars-intro-txt{
+  font-size: 3.5rem;
   font-weight: 700;
+  padding-top: 3.25rem;
 }
 
-.pillars-img {
+
+.pillars-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;  
+  gap: 50px;
+  padding: 75px;
+}
+
+.pillars{
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pillars-img{
   width: 5.625rem;
-  height: auto;
-  align-self: center;
+  height:auto;
 }
 
-.pillars-title {
-  color: #7f170e;
+.pillars-txt{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.pillars-title{
+  color: #7F170E;
   font-weight: 700;
   font-size: 2.25rem;
-}
-
-.pillars-elements {
-  width: 21.1875rem;
-  text-align: center;
-  flex-direction: column;
-  padding: 1.5rem;
-}
-
-.pillars {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 3rem 0 3rem 0;
 }
 
 .end-pic {
@@ -185,21 +201,36 @@
 }
 
 @media (max-width: 744px) {
-  .pillars-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .pillars-intro{
-    width: auto;
-  }
-  .pillars-heading {
-    padding: 2.5rem 0 1rem 0;
-  }
-
   .purpose{
     padding: 1rem;
   }
 }
 
+@media (max-width: 1052px){
+  .our-pillars{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pillars-intro{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #D8D8D8;
+    }
+
+    .pillars-intro-txt-container{
+      padding-left: 5vw;
+      padding-right: 5vw;
+      padding-top: 5vh;
+      }
+}
+
+@media (max-width: 375px){
+  .pillars-intro-txt{
+    font-size: 15vw;
+    font-weight: 700;
+    padding-top: 3.25rem;
+  }
+}
 

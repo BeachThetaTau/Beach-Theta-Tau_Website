@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-
       <NavBar />
       <ParallaxScenery />
       <div className="gray-background">
@@ -17,8 +16,8 @@ function Home() {
           <h4>OUR PURPOSE</h4>
           <p>
             The purpose of Theta Tau is to develop and maintain a high standard
-            of professional interest among its members, and to unite them in a{" "}
-            <span id="yellow">strong bond of fraternal fellowship</span>.
+            of professional interest among its members, and to unite them in a
+            <span id="yellow"> strong bond of fraternal fellowship</span>.
           </p>
         </div>
       </div>
@@ -33,9 +32,11 @@ function Home() {
             dedication, we foster fraternal fellowship, support professional
             growth, and serve our communities.
           </p>
-          <Link to = "/about"><ResponsiveButton/></Link>
+          <Link to="/about">
+            <ResponsiveButton />
+          </Link>
         </div>
-        <img src="WhoAreWe.jpg" alt="Who Are We" className="who-are-we-img"/>
+        <img src="WhoAreWe.jpg" alt="Who Are We" className="who-are-we-img" />
       </div>
 
       <div className="achievements-container">
@@ -60,17 +61,21 @@ function Home() {
         </ul>
       </div>
 
-      <div className="pillars-container">
+      <div className="our-pillars">
         <div className="pillars-intro">
-          <h6 className="pillars-heading">OUR PILLARS</h6>
-          <p className="pillars-description">
+          <div className="pillars-intro-txt-container">
+          <h5 className="pillars-subtitle">OUR PILLARS</h5>
+          <h2 className="pillars-intro-txt">
             We have three pillars that represent the core values and principles
             of the organization
-          </p>
+          </h2>
+
+          </div>
+          
         </div>
 
-        <ul className="pillars">
-          <li className="pillars-elements">
+        <div className="pillars-container">
+          <div className="pillars">
             <img
               src="PhilanthrophyIcon.png"
               alt="Philanthrophy Icon"
@@ -83,11 +88,12 @@ function Home() {
               activities, philanthropic initiatives, and projects that benefit
               society and promote the welfare of others.
             </p>
-            <Link to = "/service"><Button text="Learn More" /></Link>
-            
-          </li>
+            <Link to="/service">
+              <Button text="Learn More" />
+            </Link>
+          </div>
 
-          <li className="pillars-elements">
+          <div className="pillars">
             <img
               src="ProfessionalismIcon.png"
               alt="Professionalism Icon"
@@ -100,11 +106,12 @@ function Home() {
               standards of ethics, integrity, and responsibility in every facet
               of their academic, personal, and professional endeavors.
             </p>
-            <Link to = "/professionalism"><Button text="Learn More" /></Link>
+            <Link to="/professionalism">
+              <Button text="Learn More" />
+            </Link>
+          </div>
 
-          </li>
-
-          <li className="pillars-elements">
+          <div className="pillars">
             <img
               src="BrotherhoodIcon.png"
               alt="Brotherhood Icon"
@@ -117,13 +124,16 @@ function Home() {
               where we can connect, collaborate, and grow together, both
               personally and professionally.
             </p>
-            <Link to = "/social"><Button text="Learn More" /></Link>
-          </li>
-        </ul>
+            <Link to="/social">
+              <Button text="Learn More" />
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <img src="FillerPic.jpg" alt="Theta Tau Members Having Fun" className="end-pic" />
-      <Footer />
+      <div><img src="FillerPic.jpg" alt="Theta Tau Members Having Fun" className="end-pic" />
+      <Footer /></div>
+      
     </>
   );
 }
