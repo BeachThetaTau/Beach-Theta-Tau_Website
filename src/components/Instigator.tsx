@@ -150,7 +150,7 @@ const Instigator = {
   ],
 };
 
-export default function B2Tree() {
+export default function InstigatorTree() {
   const [nodeSize] = useState({
     x: 115, // horizontal size
     y: 120, // vertical size
