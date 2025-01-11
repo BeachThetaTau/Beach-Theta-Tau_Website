@@ -120,7 +120,6 @@ const Profile = () => {
             { field: "major", label: "Major" },
             { field: "className", label: "Class" },
             { field: "gradYear", label: "Graduation Year" },
-            { field: "position", label: "Position" },
             { field: "linkedIn", label: "LinkedIn" },
           ].map(({ field, label }) => (
             <div key={field} className="info-field">
