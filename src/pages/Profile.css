@@ -48,20 +48,21 @@
 }
 
 .user-input {
-  border: none; /* Remove the default border */
-  border-bottom: 1px solid #ccc; /* Add a bottom border to make it look like a line */
-  background: none; /* Remove the background */
-  outline: none; /* Remove the outline when focused */
-  padding: 5px 0; /* Add some spacing for better alignment */
-  font-size: 1rem; /* Adjust the font size to match the design */
-  color: #333; /* Text color */
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: none;
+  outline: none;
+  padding: 5px 0;
+  font-size: 1rem;
+  color: #333;
   width: 20rem;
 }
 
 .user-input:focus {
-  border-bottom: 1px solid #007bff; /* Change the bottom border color on focus */
+  border-bottom: 1px solid #007bff;
   outline: none;
 }
+
 .logout,
 .save,
 .cancel {
