@@ -113,3 +113,9 @@
   color: rgb(33, 37, 41);
   font-weight: 700;
 }
+
+@media (max-width: 580px) {
+  .profile-container {
+    margin-bottom: 30vh;
+  }
+}
