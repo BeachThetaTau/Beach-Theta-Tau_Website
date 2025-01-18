@@ -1,171 +1,207 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from "./../firebase";
+import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
-import { db } from "./../firebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import "./Profile.css";
 import Footer from "../components/Footer";
 
 const Profile = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
-  const [originalData, setOriginalData] = useState(null);
-  const [profilePic, setProfilePic] = useState("/Brothers/blank-pfp.webp"); // Default profile picture
+  const [editedData, setEditedData] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
+  const db = getFirestore();
+  const user = auth.currentUser;
+
+  const logoutUser = async (e) => {
+    e.preventDefault();
+    try {
+      await signOut(auth);
+      navigate("/");
+    } catch (error) {
+      console.error("Logout failed: ", error);
+    }
+  };
 
   useEffect(() => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+
     const fetchUserData = async () => {
-      const user = auth.currentUser;
-
-      if (!user) {
-        navigate("/login");
-        return;
-      }
-
       try {
         const userDocRef = doc(db, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
-          const data = userDoc.data();
-          setUserData(data);
-          setOriginalData(data); // Save original data for cancellation
-
-          // Generate the profile picture filename if name exists
-          if (data.name) {
-            updateProfilePic(data.name);
-          }
+          setUserData(userDoc.data());
         } else {
-          console.error("User data not found!");
+          const defaultData = {
+            name: "",
+            major: "",
+            class: "",
+            gradYear: "",
+            linkedIn: "",
+          };
+          await setDoc(userDocRef, defaultData);
+          setUserData(defaultData);
+          setIsEditing(true);
         }
       } catch (error) {
-        console.error("Error fetching user data:", error);
-      } finally {
-        setLoading(false);
+        console.error("Error fetching or creating user data: ", error);
       }
     };
 
     fetchUserData();
-  }, [navigate]);
+  }, [user, db, navigate]);
 
-  const updateProfilePic = (name) => {
-    if (name) {
-      const formattedName = name.replace(/\s+/g, "") + ".webp";
-      console.log(`Profile picture filename: ${formattedName}`);
-      setProfilePic(`/Brothers/${formattedName}`);
-    } else {
-      setProfilePic("/Brothers/blank-pfp.webp"); // Fallback to default picture
+  const handleEditClick = () => {
+    setEditedData(userData);
+    setIsEditing(true);
+  };
+
+  const handleInputChange = (field, value) => {
+    setEditedData((prevData) => ({ ...prevData, [field]: value }));
+  };
+
+  const validateData = () => {
+    if (!editedData.name || editedData.name.trim() === "") {
+      return false;
     }
-  };
 
-  const logoutUser = async (e) => {
-    e.preventDefault();
-    await signOut(auth);
-    navigate("/");
-  };
+    if (editedData.gradYear && isNaN(editedData.gradYear)) {
+      return false;
+    }
 
-  const handleEditToggle = () => {
-    setIsEditing((prev) => !prev);
-    setOriginalData(userData); // Save current data as original when entering edit mode
-  };
+    const urlPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/.*$/i;
+    if (editedData.linkedIn && !urlPattern.test(editedData.linkedIn)) {
+      return false;
+    }
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    return true;
   };
 
   const handleSave = async () => {
-    if (!auth.currentUser) return;
+    if (!validateData()) return;
 
+    setIsLoading(true);
     try {
-      const userDocRef = doc(db, "users", auth.currentUser.uid);
-      await setDoc(userDocRef, userData, { merge: true });
-
-      // Update the profile picture after saving
-      if (userData.name) {
-        updateProfilePic(userData.name);
-      }
-
+      const userDocRef = doc(db, "users", user.uid);
+      const updatedData = { ...editedData, verified: false }; // Add 'verified' field set to false
+      await updateDoc(userDocRef, updatedData);
+      setUserData(updatedData);
       setIsEditing(false);
     } catch (error) {
-      console.error("Error saving user data:", error);
+      console.error("Error updating user data: ", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const handleCancel = () => {
-    setUserData(originalData); // Restore original data
     setIsEditing(false);
   };
 
-  if (loading) return <div>Loading...</div>;
+  const formatNameForPfp = (name) => {
+    return name ? name.replace(/[^a-zA-Z]/g, "") : "blankpfp";
+  };
+
+  const getPfpPath = () => {
+    const name = formatNameForPfp(userData?.name);
+    const pfpFile = `Brothers/${name}.webp`;
+    const fileExists = true; // Simulated; replace with actual file existence logic
+    return fileExists ? pfpFile : "blankpfp.webp";
+  };
+
+  const pfpPath = getPfpPath();
+
+  if (!user) return null;
 
   return (
     <>
       <div className="profile-container">
         <div className="user-container">
-          <img src={profilePic} alt="User profile" className="pfp" />
-          <button type="submit" className="logout" onClick={logoutUser}>
+          <img
+            className="pfp"
+            src={pfpPath}
+            alt="profile picture"
+            aria-label="User profile picture"
+          />
+          <button
+            type="button"
+            className="logout"
+            onClick={logoutUser}
+            aria-label="Logout button"
+          >
             Logout
           </button>
         </div>
 
         <div className="user-info">
-          {[
-            { field: "name", label: "Name" },
-            { field: "major", label: "Major" },
-            { field: "className", label: "Class" },
-            { field: "gradYear", label: "Graduation Year" },
-            { field: "linkedIn", label: "LinkedIn" },
-          ].map(({ field, label }) => (
-            <div key={field} className="info-field">
-              <p className="label">{label}:</p>
+          {["name", "major", "class", "gradYear", "linkedIn"].map((field) => (
+            <div className="info-field" key={field}>
+              <p className="label">
+                {field === "gradYear"
+                  ? "Graduation Year:"
+                  : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
+              </p>
               {isEditing ? (
                 <input
                   type="text"
-                  name={field}
-                  value={userData?.[field] || ""}
-                  onChange={handleInputChange}
                   className="user-input"
+                  value={editedData[field] || ""}
+                  onChange={(e) => handleInputChange(field, e.target.value)}
+                  aria-label={`Edit ${field}`}
                 />
               ) : (
-                <p className="user-data">
-                  {field === "linkedIn" && userData?.[field] ? (
-                    <a
-                      href={userData[field]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="user-data-link"
-                    >
-                      {userData[field]}
-                    </a>
-                  ) : (
-                    userData?.[field] || "N/A"
-                  )}
-                </p>
+                <p className="user-data">{userData?.[field] || "N/A"}</p>
               )}
             </div>
           ))}
+
           {isEditing ? (
             <div className="button-group">
-              <button className="save" onClick={handleSave}>
-                Save
+              <button
+                className="save"
+                onClick={handleSave}
+                disabled={isLoading}
+                aria-label="Save button"
+              >
+                {isLoading ? "Saving..." : "Save"}
               </button>
-              <button className="cancel" onClick={handleCancel}>
+              <button
+                className="cancel"
+                onClick={handleCancel}
+                disabled={isLoading}
+                aria-label="Cancel button"
+              >
                 Cancel
               </button>
             </div>
           ) : (
-            <button className="edit" onClick={handleEditToggle}>
-              Edit Profile <img src="edit.png" alt="pen" id="EditIcon" />
-            </button>
+            <div className="edit-container">
+              <button
+                className="edit"
+                onClick={handleEditClick}
+                aria-label="Edit profile button"
+              >
+                Edit Profile <img id="EditIcon" src="edit.png" alt="edit" />
+              </button>
+            </div>
           )}
         </div>
       </div>
+
       <Footer />
     </>
   );

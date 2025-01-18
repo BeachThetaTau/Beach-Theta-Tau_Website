@@ -114,8 +114,14 @@
   font-weight: 700;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 815px) {
+  .edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .profile-container {
-    margin-bottom: 30vh;
+    margin-bottom: 40vh;
   }
 }
