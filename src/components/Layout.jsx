@@ -38,7 +38,7 @@ const Layout = () => {
 
   return (
     <div className="container-fluid">
-      <HamburgerMenu/>
+      <HamburgerMenu user={user} />
       <div className="row justify-content-center">
         <div className="navbar-container">
           <nav className="navbar">
@@ -51,7 +51,7 @@ const Layout = () => {
             <div className="links">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
-               {/*}<Link to="/under-construction">Meet Us</Link> {*/}
+              {/*}<Link to="/under-construction">Meet Us</Link> {*/}
               <Link to="/social">Social</Link>
               <Link to="/professionalism">Professionalism</Link>
               <Link to="/service">Service</Link>
