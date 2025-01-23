@@ -60,4 +60,5 @@ Beach-Theta-Tau_Website/
 
 - [Dalfodev](https://github.com/dalfodev): Full-stack developer contributing to both frontend and backend for the Theta Tau Xi Epsilon website.
 - [MarkCarsonDev](https://github.com/MarkCarsonDev): Backend developer who specializes in server-side functionalities.
+
   Rah rah!
