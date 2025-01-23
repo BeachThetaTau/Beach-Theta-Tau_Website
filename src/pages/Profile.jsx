@@ -52,6 +52,8 @@ const Profile = () => {
             class: "",
             gradYear: "",
             linkedIn: "",
+            email: user.email || "",
+            verified: false,
           };
           await setDoc(userDocRef, defaultData);
           setUserData(defaultData);
@@ -97,7 +99,12 @@ const Profile = () => {
     setIsLoading(true);
     try {
       const userDocRef = doc(db, "users", user.uid);
-      const updatedData = { ...editedData, verified: false }; // Add 'verified' field set to false
+      // Add 'verified: false' to the updated data
+      const updatedData = {
+        ...editedData,
+        email: user.email || "",
+        verified: false,
+      };
       await updateDoc(userDocRef, updatedData);
       setUserData(updatedData);
       setIsEditing(false);
@@ -112,15 +119,14 @@ const Profile = () => {
     setIsEditing(false);
   };
 
-  const formatNameForPfp = (name) => {
-    return name ? name.replace(/[^a-zA-Z]/g, "") : "blankpfp";
-  };
-
   const getPfpPath = () => {
-    const name = formatNameForPfp(userData?.name);
-    const pfpFile = `Brothers/${name}.webp`;
-    const fileExists = true; // Simulated; replace with actual file existence logic
-    return fileExists ? pfpFile : "blankpfp.webp";
+    if (userData?.verified) {
+      const name = userData.name
+        ? userData.name.replace(/[^a-zA-Z]/g, "")
+        : "blankpfp";
+      return `Brothers/${name}.webp`;
+    }
+    return "/Brothers/blankpfp.webp";
   };
 
   const pfpPath = getPfpPath();
@@ -148,26 +154,28 @@ const Profile = () => {
         </div>
 
         <div className="user-info">
-          {["name", "major", "class", "gradYear", "linkedIn"].map((field) => (
-            <div className="info-field" key={field}>
-              <p className="label">
-                {field === "gradYear"
-                  ? "Graduation Year:"
-                  : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
-              </p>
-              {isEditing ? (
-                <input
-                  type="text"
-                  className="user-input"
-                  value={editedData[field] || ""}
-                  onChange={(e) => handleInputChange(field, e.target.value)}
-                  aria-label={`Edit ${field}`}
-                />
-              ) : (
-                <p className="user-data">{userData?.[field] || "N/A"}</p>
-              )}
-            </div>
-          ))}
+          {["name", "major", "class", "gradYear", "linkedIn", "email"].map(
+            (field) => (
+              <div className="info-field" key={field}>
+                <p className="label">
+                  {field === "gradYear"
+                    ? "Graduation Year:"
+                    : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
+                </p>
+                {isEditing && field !== "email" ? (
+                  <input
+                    type="text"
+                    className="user-input"
+                    value={editedData[field] || ""}
+                    onChange={(e) => handleInputChange(field, e.target.value)}
+                    aria-label={`Edit ${field}`}
+                  />
+                ) : (
+                  <p className="user-data">{userData?.[field] || "N/A"}</p>
+                )}
+              </div>
+            )
+          )}
 
           {isEditing ? (
             <div className="button-group">
