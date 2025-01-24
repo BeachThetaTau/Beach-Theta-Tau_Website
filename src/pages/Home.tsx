@@ -32,7 +32,7 @@ function Home() {
             dedication, we foster fraternal fellowship, support professional
             growth, and serve our communities.
           </p>
-          <Link to="/about">
+          <Link to="/about" target="_top">
             <ResponsiveButton />
           </Link>
         </div>
@@ -64,14 +64,12 @@ function Home() {
       <div className="our-pillars">
         <div className="pillars-intro">
           <div className="pillars-intro-txt-container">
-          <h5 className="pillars-subtitle">OUR PILLARS</h5>
-          <h2 className="pillars-intro-txt">
-            We have three pillars that represent the core values and principles
-            of the organization
-          </h2>
-
+            <h5 className="pillars-subtitle">OUR PILLARS</h5>
+            <h2 className="pillars-intro-txt">
+              We have three pillars that represent the core values and
+              principles of the organization
+            </h2>
           </div>
-          
         </div>
 
         <div className="pillars-container">
@@ -88,7 +86,7 @@ function Home() {
               activities, philanthropic initiatives, and projects that benefit
               society and promote the welfare of others.
             </p>
-            <Link to="/service">
+            <Link to="/service" target="_top">
               <Button text="Learn More" />
             </Link>
           </div>
@@ -106,7 +104,7 @@ function Home() {
               standards of ethics, integrity, and responsibility in every facet
               of their academic, personal, and professional endeavors.
             </p>
-            <Link to="/professionalism">
+            <Link to="/professionalism" target="_top">
               <Button text="Learn More" />
             </Link>
           </div>
@@ -124,16 +122,21 @@ function Home() {
               where we can connect, collaborate, and grow together, both
               personally and professionally.
             </p>
-            <Link to="/social">
+            <Link to="/social" target="_top">
               <Button text="Learn More" />
             </Link>
           </div>
         </div>
       </div>
 
-      <div><img src="FillerPic.jpg" alt="Theta Tau Members Having Fun" className="end-pic" />
-      <Footer /></div>
-      
+      <div>
+        <img
+          src="FillerPic.jpg"
+          alt="Theta Tau Members Having Fun"
+          className="end-pic"
+        />
+        <Footer />
+      </div>
     </>
   );
 }
