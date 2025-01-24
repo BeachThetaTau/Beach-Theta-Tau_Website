@@ -4,14 +4,11 @@ import GenerateParallax from "../components/PillarsParallax";
 import ResponsiveButton from "../components/ResponsiveButton";
 import Footer from "../components/Footer";
 
-
 function About() {
   return (
     <>
       <NavBar />
-      <GenerateParallax 
-      fileName="About.jpg" 
-      title="About" />
+      <GenerateParallax fileName="About.jpg" title="About" />
 
       <div className="our-motto">
         <img src="Hammer-and-tongs.png" alt="" className="our-motto-img" />
@@ -35,8 +32,13 @@ function About() {
             underscoring its dedication to quality education and engineering
             principles.
           </p>
-          <a href="https://thetatau.org/" target = "blank"><ResponsiveButton /></a>
-          
+          <a
+            href="https://thetatau.org/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <ResponsiveButton />
+          </a>
         </div>
         <img src="TTFounders.jpg" alt="" className="founders-img" />
       </div>
@@ -55,7 +57,11 @@ function About() {
             Theta Tau.
           </p>
         </div>
-        <img src="Founders.jpg" alt="Xi Epsilon founders picture" className="founders" />
+        <img
+          src="Founders.jpg"
+          alt="Xi Epsilon founders picture"
+          className="founders"
+        />
       </div>
 
       <Footer />
