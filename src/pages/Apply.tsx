@@ -12,8 +12,8 @@ function Service() {
       <div className="recruitment-container-grey">
         <div className="recruitment-heading-container">
           <p className="recruitment-heading">Spring 2024 Recruitment</p>
-          {/* TODO: Update this to reflect the semester and year you are recruiting*/}
-          for
+          {/* TODO: Update this to reflect the semester and year you are recruiting for */}
+
           <img src="ThetaTau.png" alt="" className="recruitment-img" />
         </div>
         <div className="recruitment-info-container">
