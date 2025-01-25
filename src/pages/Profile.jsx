@@ -17,6 +17,7 @@ const Profile = () => {
   const [userData, setUserData] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [editedData, setEditedData] = useState({});
+  const [validationErrors, setValidationErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const db = getFirestore();
@@ -52,6 +53,7 @@ const Profile = () => {
             class: "",
             gradYear: "",
             linkedIn: "",
+            resumeLink: "",
             email: user.email || "",
             verified: false,
           };
@@ -69,6 +71,7 @@ const Profile = () => {
 
   const handleEditClick = () => {
     setEditedData(userData);
+    setValidationErrors([]);
     setIsEditing(true);
   };
 
@@ -77,20 +80,28 @@ const Profile = () => {
   };
 
   const validateData = () => {
+    const errors = [];
+
     if (!editedData.name || editedData.name.trim() === "") {
-      return false;
+      errors.push("Name is required.");
     }
 
     if (editedData.gradYear && isNaN(editedData.gradYear)) {
-      return false;
+      errors.push("Graduation year must be a number.");
     }
 
-    const urlPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/.*$/i;
-    if (editedData.linkedIn && !urlPattern.test(editedData.linkedIn)) {
-      return false;
+    const urlPattern = /^(https?:\/\/)?.*$/i;
+    if (editedData.resumeLink && !urlPattern.test(editedData.resumeLink)) {
+      errors.push("Resume link must be a valid URL.");
     }
 
-    return true;
+    const linkedInPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/.*$/i;
+    if (editedData.linkedIn && !linkedInPattern.test(editedData.linkedIn)) {
+      errors.push("LinkedIn must be a valid LinkedIn URL.");
+    }
+
+    setValidationErrors(errors);
+    return errors.length === 0;
   };
 
   const handleSave = async () => {
@@ -99,7 +110,6 @@ const Profile = () => {
     setIsLoading(true);
     try {
       const userDocRef = doc(db, "users", user.uid);
-      // Add 'verified: false' to the updated data
       const updatedData = {
         ...editedData,
         email: user.email || "",
@@ -116,6 +126,7 @@ const Profile = () => {
   };
 
   const handleCancel = () => {
+    setValidationErrors([]);
     setIsEditing(false);
   };
 
@@ -154,15 +165,17 @@ const Profile = () => {
         </div>
 
         <div className="user-info">
-          {["name", "major", "class", "gradYear", "linkedIn", "email"].map(
+          {["name", "major", "class", "gradYear", "linkedIn", "resumeLink"].map(
             (field) => (
               <div className="info-field" key={field}>
                 <p className="label">
                   {field === "gradYear"
                     ? "Graduation Year:"
-                    : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
+                    : field === "resumeLink"
+                      ? "Resume Link:"
+                      : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
                 </p>
-                {isEditing && field !== "email" ? (
+                {isEditing ? (
                   <input
                     type="text"
                     className="user-input"
@@ -177,26 +190,40 @@ const Profile = () => {
             )
           )}
 
-          {isEditing ? (
-            <div className="button-group">
-              <button
-                className="save"
-                onClick={handleSave}
-                disabled={isLoading}
-                aria-label="Save button"
-              >
-                {isLoading ? "Saving..." : "Save"}
-              </button>
-              <button
-                className="cancel"
-                onClick={handleCancel}
-                disabled={isLoading}
-                aria-label="Cancel button"
-              >
-                Cancel
-              </button>
-            </div>
-          ) : (
+          {isEditing && (
+            <>
+              <div className="button-group">
+                <button
+                  className="save"
+                  onClick={handleSave}
+                  disabled={isLoading}
+                  aria-label="Save button"
+                >
+                  {isLoading ? "Saving..." : "Save"}
+                </button>
+                <button
+                  className="cancel"
+                  onClick={handleCancel}
+                  disabled={isLoading}
+                  aria-label="Cancel button"
+                >
+                  Cancel
+                </button>
+              </div>
+
+              {validationErrors.length > 0 && (
+                <div className="error-messages">
+                  {validationErrors.map((error, index) => (
+                    <p key={index} className="error-text">
+                      {error}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+
+          {!isEditing && (
             <div className="edit-container">
               <button
                 className="edit"

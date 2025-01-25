@@ -96,6 +96,12 @@
   background-color: #601008;
 }
 
+.error-text {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
 .button-group {
   display: flex;
   justify-content: space-between;
