@@ -12,26 +12,38 @@ function Service() {
       <div className="recruitment-container-grey">
         <div className="recruitment-heading-container">
           <p className="recruitment-heading">Spring 2024 Recruitment</p>
+          {/* TODO: Update this to reflect the semester and year you are recruiting*/}
+          for
           <img src="ThetaTau.png" alt="" className="recruitment-img" />
         </div>
         <div className="recruitment-info-container">
           <div className="recruitment-line">
             <p className="recruitment-info-txt">
-              Theta Tau is recruiting individuals with at least 2 more semesters
-              remaining this fall to join the upcoming Nu class. Any student who
-              is either (1) in the College of Engineering or (2) majoring in CS,
-              BioE, or EnvE, outside the College of Engineering is eligible to
-              apply, provided they have a GPA of 2.5 or above. Please note that
-              exchange/study-abroad students are not eligible.
+              Theta Tau is recruiting individuals with at least two semesters
+              remaining at CSULB to join the upcoming class. To be eligible,
+              students must be enrolled in the CSULB College of Engineering with
+              a GPA of 2.5 or above. Please note that exchange or study-abroad
+              students are not eligible to apply.
             </p>
             <p className="recruitment-info-txt">
               We welcome applications from individuals at any stage of their
               academic or professional journey. Please keep an eye out for
               application resources, including those currently accessible on our
-              <a href="https://www.instagram.com/beachthetatau/" target="blank"><span id = "Instagram" className="recruitment-info-txt"> Instagram</span></a> stories and highlighted takeovers.
+              <a href="https://www.instagram.com/beachthetatau/" target="blank">
+                <span id="Instagram" className="recruitment-info-txt">
+                  {" "}
+                  Instagram
+                </span>
+              </a>{" "}
+              stories and highlighted takeovers.
             </p>
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSXSPNIAb9oN6wKzl0ozwQtK1sp8ri82g_bn3SfcBPOBS3gA/viewform" target = "blank"><OutlinedButton text="Application" fontSize="1.125rem" /></a>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeSXSPNIAb9oN6wKzl0ozwQtK1sp8ri82g_bn3SfcBPOBS3gA/viewform" // TODO: Update this url its should link to a ggogle form to apply to
+              target="blank"
+            >
+              <OutlinedButton text="Application" fontSize="1.125rem" />
+            </a>
           </div>
         </div>
       </div>
@@ -53,7 +65,7 @@ function Service() {
         <p className="rush-timeline">Rush Timeline</p>
         <RushTimeline />
 
-        <div className="attire-guidelines-container" id = "attire-guidelines">
+        <div className="attire-guidelines-container" id="attire-guidelines">
           <p className="attire-guidelines-heading">Attire Guidelines</p>
           <p className="attire-guidelines-subheading">Buisiness Casual</p>
 
@@ -111,7 +123,12 @@ function Service() {
             <br />
             <p className="recruitment-contact">
               Theta Tau Xi-Epsilon Email:
-              <a href="mailto:beachthetatau@gmail.com" className="recruitment-contact"><strong> beachthetatau@gmail.com</strong></a>
+              <a
+                href="mailto:beachthetatau@gmail.com"
+                className="recruitment-contact"
+              >
+                <strong> beachthetatau@gmail.com</strong>
+              </a>
             </p>
           </p>
         </div>
