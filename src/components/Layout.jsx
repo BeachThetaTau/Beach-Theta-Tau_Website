@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import HamburgerMenu from "../components/HamburgerMenu";
+import Footer from "../components/Footer";
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -37,39 +38,42 @@ const Layout = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <HamburgerMenu user={user} />
-      <div className="row justify-content-center">
-        <div className="navbar-container">
-          <nav className="navbar">
-            <div className="logo">
-              <Link to="">
-                <DisplayLogo />
-              </Link>
-            </div>
+    <>
+      <div className="container-fluid">
+        <HamburgerMenu user={user} />
+        <div className="row justify-content-center">
+          <div className="navbar-container">
+            <nav className="navbar">
+              <div className="logo">
+                <Link to="">
+                  <DisplayLogo />
+                </Link>
+              </div>
 
-            <div className="links">
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              {/*}<Link to="/under-construction">Meet Us</Link> {*/}
-              <Link to="/social">Social</Link>
-              <Link to="/professionalism">Professionalism</Link>
-              <Link to="/service">Service</Link>
-              <Link to="/apply">
-                <OutlinedButton text="Apply Now" />
-              </Link>
-              <a className="nav-line"></a>
-              {user ? (
-                <Link to="/profile">{user.email}</Link>
-              ) : (
-                <Link to="/login">Login</Link>
-              )}
-            </div>
-          </nav>
+              <div className="links">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                {/*}<Link to="/under-construction">Meet Us</Link> {*/}
+                <Link to="/social">Social</Link>
+                <Link to="/professionalism">Professionalism</Link>
+                <Link to="/service">Service</Link>
+                <Link to="/apply">
+                  <OutlinedButton text="Apply Now" />
+                </Link>
+                <a className="nav-line"></a>
+                {user ? (
+                  <Link to="/profile">{user.email}</Link>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
+              </div>
+            </nav>
+          </div>
+          <Outlet />
         </div>
-        <Outlet />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

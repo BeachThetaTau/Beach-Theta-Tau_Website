@@ -1,5 +1,3 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import RushTimeline from "../components/Timeline";
 import OutlinedButton from "../components/OutlinedButton";
 
@@ -8,7 +6,6 @@ import "./Apply.css";
 function Service() {
   return (
     <>
-      <NavBar />
       <div className="recruitment-container-grey">
         <div className="recruitment-heading-container">
           <p className="recruitment-heading">Spring 2024 Recruitment</p>
@@ -133,8 +130,6 @@ function Service() {
           </p>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

@@ -10,7 +10,6 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import "./Profile.css";
-import Footer from "../components/Footer";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -236,8 +235,6 @@ const Profile = () => {
           )}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

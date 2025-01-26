@@ -1,13 +1,10 @@
 import "./About.css";
-import NavBar from "../components/NavBar";
 import GenerateParallax from "../components/PillarsParallax";
 import ResponsiveButton from "../components/ResponsiveButton";
-import Footer from "../components/Footer";
 
 function About() {
   return (
     <>
-      <NavBar />
       <GenerateParallax fileName="About.jpg" title="About" />
 
       <div className="our-motto">
@@ -63,8 +60,6 @@ function About() {
           className="founders"
         />
       </div>
-
-      <Footer />
     </>
   );
 }

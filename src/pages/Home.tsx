@@ -1,15 +1,12 @@
 import "./Home.css"; // Correct import for Home.css
-import NavBar from "../components/NavBar";
 import Button from "../components/Button";
 import ParallaxScenery from "../components/ParallaxScenery";
 import ResponsiveButton from "../components/ResponsiveButton";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <NavBar />
       <ParallaxScenery />
       <div className="gray-background">
         <div className="purpose">
@@ -129,14 +126,11 @@ function Home() {
         </div>
       </div>
 
-      <div>
-        <img
-          src="FillerPic.jpg"
-          alt="Theta Tau Members Having Fun"
-          className="end-pic"
-        />
-        <Footer />
-      </div>
+      <img
+        src="FillerPic.jpg"
+        alt="Theta Tau Members Having Fun"
+        id="end-pic"
+      />
     </>
   );
 }

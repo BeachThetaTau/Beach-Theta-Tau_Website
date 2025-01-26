@@ -1,12 +1,9 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import "./Service.css";
 
 function Service() {
   return (
     <>
-      <NavBar />
       <GenerateParallax fileName="Service.jpg" title="Service" />
 
       <div className="service-container">
@@ -43,7 +40,7 @@ function Service() {
               src="Prepping.jpg"
               alt="Blank Square"
               className="service-img-square"
-              id = "prepping-food"
+              id="prepping-food"
             />
           </div>
           <img src="Cooking.jpg" alt="Cooking" id="cooking-img" />
@@ -57,7 +54,11 @@ function Service() {
 
         <div className="empower-card-container">
           <div className="empower-card">
-            <img src="Volunteering.jpg" alt="Blank Square" className="card-img" />
+            <img
+              src="Volunteering.jpg"
+              alt="Blank Square"
+              className="card-img"
+            />
             <h2 className="empower-subheading">Volunteer</h2>
             <p className="empower-txt">
               Through our collaborative efforts with fellow volunteers, we
@@ -77,7 +78,11 @@ function Service() {
           </div>
 
           <div className="empower-card">
-            <img src="Conservation.jpg" alt="Blank Square" className="card-img" />
+            <img
+              src="Conservation.jpg"
+              alt="Blank Square"
+              className="card-img"
+            />
             <h2 className="empower-subheading">Conservation Efforts</h2>
             <p className="empower-txt">
               Through our dedicated conservation efforts alongside passionate
@@ -124,8 +129,6 @@ function Service() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

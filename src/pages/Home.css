@@ -113,75 +113,73 @@
   font-size: 1.625rem;
 }
 
-.our-pillars{
+.our-pillars {
   display: flex;
   flex-direction: row;
   padding: 0;
   margin: 0;
 }
 
-.pillars-intro{
+.pillars-intro {
   width: 40vw;
   display: flex;
   flex-direction: column;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   position: relative;
   left: -10px;
-  }
-  
-
-.pillars-intro-txt-container{
-padding-left: 5vw;
-padding-right: 5vw;
-padding-top: 15vh;
 }
 
-.pillars-subtitle{
+.pillars-intro-txt-container {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 15vh;
+}
+
+.pillars-subtitle {
   font-size: 1.75rem;
 }
 
-.pillars-intro-txt{
+.pillars-intro-txt {
   font-size: 3.5rem;
   font-weight: 700;
   padding-top: 3.25rem;
 }
 
-
-.pillars-container{
+.pillars-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; 
-  align-items: center;  
+  justify-content: center;
+  align-items: center;
   gap: 50px;
   padding: 75px;
 }
 
-.pillars{
+.pillars {
   width: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.pillars-img{
+.pillars-img {
   width: 5.625rem;
-  height:auto;
+  height: auto;
 }
 
-.pillars-txt{
+.pillars-txt {
   text-align: center;
   font-size: 1rem;
 }
 
-.pillars-title{
-  color: #7F170E;
+.pillars-title {
+  color: #7f170e;
   font-weight: 700;
   font-size: 2.25rem;
 }
 
-.end-pic {
-  width: 100%;
+#end-pic {
+  padding: 0;
 }
 
 @media (max-width: 956px) {
@@ -189,48 +187,45 @@ padding-top: 15vh;
     width: 80vw;
     padding: 1rem;
   }
-
 }
 
-@media (max-width: 1122px){
+@media (max-width: 1122px) {
   .who-are-we-txt-container {
     width: 50rem;
     padding-bottom: 2vh;
-
   }
 }
 
 @media (max-width: 744px) {
-  .purpose{
+  .purpose {
     padding: 1rem;
   }
 }
 
-@media (max-width: 1052px){
-  .our-pillars{
+@media (max-width: 1052px) {
+  .our-pillars {
     display: flex;
     flex-direction: column;
   }
 
-  .pillars-intro{
+  .pillars-intro {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #D8D8D8;
-    }
+    background-color: #d8d8d8;
+  }
 
-    .pillars-intro-txt-container{
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-top: 5vh;
-      }
+  .pillars-intro-txt-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+  }
 }
 
-@media (max-width: 375px){
-  .pillars-intro-txt{
+@media (max-width: 375px) {
+  .pillars-intro-txt {
     font-size: 15vw;
     font-weight: 700;
     padding-top: 3.25rem;
   }
 }
-

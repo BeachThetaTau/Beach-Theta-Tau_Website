@@ -1,6 +1,4 @@
-import NavBar from "../components/NavBar";
 import DisplayCarousel from "../components/ThreeImgCarousel";
-import Footer from "../components/Footer";
 import GenerateParallax from "../components/PillarsParallax";
 import FadeInList from "../components/FadeInList";
 import Logos from "../components/LogoCarousel";
@@ -9,7 +7,6 @@ import "./Professionalism.css";
 function Professionalism() {
   return (
     <>
-      <NavBar />
       <GenerateParallax
         fileName="Professionalism.jpg"
         title="Professionalism"
@@ -65,59 +62,55 @@ function Professionalism() {
         <h2 className="proff-subheading">WHERE TT CAN TAKE YOU</h2>
         <FadeInList />
         <Logos />
-			  </div>
+      </div>
 
-        <div className="offerings">
-          <h2 className="offering-headding">
-            A strong introduction can transform your career trajectory
-          </h2>
-          <p className="offering-subtxt">
-            Generic job applications often fall flat with top-tier employers. We
-            connect you with the opportunities that can shape your professional
-            journey by harnessing the strength of personal connections and
-            networking advantages.
-          </p>
-				
+      <div className="offerings">
+        <h2 className="offering-headding">
+          A strong introduction can transform your career trajectory
+        </h2>
+        <p className="offering-subtxt">
+          Generic job applications often fall flat with top-tier employers. We
+          connect you with the opportunities that can shape your professional
+          journey by harnessing the strength of personal connections and
+          networking advantages.
+        </p>
 
-          <div className="offerings-card-container">
-            <div className="offerings-card">
-              <h3 className="offering-card-heading">Resume Workshop</h3>
-              <p className="offering-card-txt">
-                We host resume workshops to equip our members with essential
-                career-building skills. These workshops are designed to help
-                brothers craft impressive resumes that highlight their
-                strengths, experiences, and ambitions. We provide guidance on
-                formatting, content, and tailoring resumes for specific
-                industries or roles.
-              </p>
-            </div>
+        <div className="offerings-card-container">
+          <div className="offerings-card">
+            <h3 className="offering-card-heading">Resume Workshop</h3>
+            <p className="offering-card-txt">
+              We host resume workshops to equip our members with essential
+              career-building skills. These workshops are designed to help
+              brothers craft impressive resumes that highlight their strengths,
+              experiences, and ambitions. We provide guidance on formatting,
+              content, and tailoring resumes for specific industries or roles.
+            </p>
+          </div>
 
-            <div className="offerings-card">
-              <h3 className="offering-card-heading">On-Site Tours</h3>
-              <p className="offering-card-txt">
-                Our alumni network offers frequent on-site tours at various
-                workplaces, providing valuable industry insights and networking
-                opportunities. These tours deepen our understanding of career
-                paths, connect us with professionals, and broaden our
-                perspectives on the professional world.
-              </p>
-            </div>
+          <div className="offerings-card">
+            <h3 className="offering-card-heading">On-Site Tours</h3>
+            <p className="offering-card-txt">
+              Our alumni network offers frequent on-site tours at various
+              workplaces, providing valuable industry insights and networking
+              opportunities. These tours deepen our understanding of career
+              paths, connect us with professionals, and broaden our perspectives
+              on the professional world.
+            </p>
+          </div>
 
-            <div className="offerings-card">
-              <h3 className="offering-card-heading">Mock Interview</h3>
-              <p className="offering-card-txt">
-                Our brothers' diverse experiences and commitment to growth drive
-                us to conduct mock interviews. These simulations mimic real
-                interviews, helping us practice answering questions, highlight
-                strengths, and enhance communication skills. Valuable feedback
-                from experienced members and alumni refines our techniques and
-                boosts confidence.
-              </p>
-            </div>
+          <div className="offerings-card">
+            <h3 className="offering-card-heading">Mock Interview</h3>
+            <p className="offering-card-txt">
+              Our brothers' diverse experiences and commitment to growth drive
+              us to conduct mock interviews. These simulations mimic real
+              interviews, helping us practice answering questions, highlight
+              strengths, and enhance communication skills. Valuable feedback
+              from experienced members and alumni refines our techniques and
+              boosts confidence.
+            </p>
           </div>
         </div>
-
-      <Footer />
+      </div>
     </>
   );
 }
