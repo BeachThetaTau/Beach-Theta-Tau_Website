@@ -90,14 +90,28 @@ const Profile = () => {
       errors.push("Graduation year must be a number.");
     }
 
-    const urlPattern = /^(https?:\/\/)?.*$/i;
-    if (editedData.resumeLink && !urlPattern.test(editedData.resumeLink)) {
-      errors.push("Resume link must be a valid URL.");
+    // Validate resumeLink URL: must start with "https://" and contain ".com"
+    if (editedData.resumeLink) {
+      if (
+        !editedData.resumeLink.startsWith("https://") ||
+        !editedData.resumeLink.includes(".com")
+      ) {
+        errors.push(
+          "Resume link must start with 'https://' and include '.com'."
+        );
+      }
     }
 
-    const linkedInPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/.*$/i;
-    if (editedData.linkedIn && !linkedInPattern.test(editedData.linkedIn)) {
-      errors.push("LinkedIn must be a valid LinkedIn URL.");
+    // Validate linkedIn URL: must start with "https://" and contain ".com"
+    if (editedData.linkedIn) {
+      if (
+        !editedData.linkedIn.startsWith("https://") ||
+        !editedData.linkedIn.includes(".com")
+      ) {
+        errors.push(
+          "LinkedIn link must start with 'https://' and include '.com'."
+        );
+      }
     }
 
     setValidationErrors(errors);

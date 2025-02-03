@@ -103,11 +103,12 @@
   color: red;
   font-size: 0.875rem;
   margin-top: 0.5rem;
+  padding-bottom: 3rem;
 }
 
 .button-group {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   padding-top: 2vh;
 }
 
