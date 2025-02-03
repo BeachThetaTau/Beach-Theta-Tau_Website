@@ -1,0 +1,41 @@
+.brothers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.brother {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 37.5px;
+}
+
+.brother-group h2 {
+  color: #7f170e;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-left: 13vw;
+}
+
+.brother img {
+  border-radius: 4px;
+  margin-bottom: 5px;
+  object-fit: cover;
+  width: 200px;
+  height: 290.91px;
+}
+
+.brother h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brother p {
+  font-size: 1.25rem;
+}
