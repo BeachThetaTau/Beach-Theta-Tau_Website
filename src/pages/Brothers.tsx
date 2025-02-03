@@ -5,6 +5,7 @@ import GenerateParallax from "../components/PillarsParallax";
 import Modal from "../components/Modal";
 import LinkedInButton from "../components/LinkedInButton";
 import ResumeButton from "../components/ResumeButton";
+import Toggle from "../components/Toggle";
 
 interface User {
   name: string;
@@ -13,6 +14,7 @@ interface User {
   major?: string;
   linkedIn?: string;
   resumeLink?: string;
+  position?: string;
 }
 
 const baseGreekAlphabet = [
@@ -42,6 +44,15 @@ const baseGreekAlphabet = [
   "Omega",
 ];
 
+const eboard = [
+  "Regent",
+  "Vice-Regent",
+  "Treasurer",
+  "Scribe",
+  "Corresponding Secretary",
+  "Marshal",
+];
+
 const generateExtendedGreekAlphabet = (
   baseAlphabet: string[],
   levels: number
@@ -65,33 +76,38 @@ function Brothers() {
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
+  const [showOfficers, setShowOfficers] = useState(false); // Toggle state
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const db = getFirestore();
-      const usersCollection = collection(db, "users");
-      const querySnapshot = await getDocs(usersCollection);
+      try {
+        const db = getFirestore();
+        const usersCollection = collection(db, "users");
+        const querySnapshot = await getDocs(usersCollection);
 
-      const updatedUsersMap: Record<string, User[]> = Object.fromEntries(
-        greekAlphabetOrder.map((letter) => [letter, []])
-      );
+        const updatedUsersMap: Record<string, User[]> = Object.fromEntries(
+          greekAlphabetOrder.map((letter) => [letter, []])
+        );
 
-      querySnapshot.forEach((doc) => {
-        const userData = doc.data() as User;
-        if (
-          userData.name &&
-          userData.class &&
-          greekAlphabetOrder.includes(userData.class)
-        ) {
-          updatedUsersMap[userData.class].push(userData);
-        }
-      });
+        querySnapshot.forEach((doc) => {
+          const userData = doc.data() as User;
+          if (
+            userData.name &&
+            userData.class &&
+            greekAlphabetOrder.includes(userData.class)
+          ) {
+            updatedUsersMap[userData.class].push(userData);
+          }
+        });
 
-      Object.keys(updatedUsersMap).forEach((letter) => {
-        updatedUsersMap[letter].sort((a, b) => a.name.localeCompare(b.name));
-      });
+        Object.keys(updatedUsersMap).forEach((letter) => {
+          updatedUsersMap[letter].sort((a, b) => a.name.localeCompare(b.name));
+        });
 
-      setUsersByClass(updatedUsersMap);
+        setUsersByClass(updatedUsersMap);
+      } catch (error) {
+        console.error("Error fetching users: ", error);
+      }
     };
 
     fetchUsers();
@@ -102,68 +118,131 @@ function Brothers() {
     setIsModalOpen(true);
   };
 
+  const allUsers = Object.values(usersByClass).flat();
+  const eboardMembers = allUsers
+    .filter((user) => user.position && eboard.includes(user.position))
+    .sort((a, b) => eboard.indexOf(a.position!) - eboard.indexOf(b.position!));
+  const chairs = allUsers.filter(
+    (user) => user.position && !eboard.includes(user.position)
+  );
+
   return (
     <>
       <GenerateParallax
         fileName="Brothers.jpg"
         title="Meet brothers of Theta Tau"
       />
-      {/* Modal Component */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {selectedUser && (
-          <div className="modal-container">
-            <button onClick={() => setIsModalOpen(false)}>&times;</button>
-            <div className="modal-content">
-              <img src="Brothers/blank-pfp.webp" alt="" />
-              <div className="modal-details">
-                <h2>{selectedUser.name}</h2>
-                <p>Major: {selectedUser.major || "N/A"}</p>
-                <p>Graduation Year: {selectedUser.gradYear || "N/A"}</p>
 
-                <div className="modal-buttons">
-                  {/* Display LinkedIn Button only if linkedIn field exists */}
-                  {selectedUser.linkedIn && (
-                    <LinkedInButton linkedinUrl={selectedUser.linkedIn} />
+      <div className="brothers">
+        <Toggle isChecked={showOfficers} onToggle={setShowOfficers} />
+
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          {selectedUser && (
+            <div className="modal-container">
+              <button onClick={() => setIsModalOpen(false)}>&times;</button>
+              <div className="modal-content">
+                <img src="Brothers/blank-pfp.webp" alt="" />
+                <div className="modal-details">
+                  <h2>{selectedUser.name}</h2>
+                  {selectedUser.position && (
+                    <p>Position: {selectedUser.position}</p>
                   )}
-                  {/* Display Resume Button only if resume field exists */}
-                  {selectedUser.resumeLink && (
-                    <ResumeButton resumeUrl={selectedUser.resumeLink} />
-                  )}
+                  <p>Major: {selectedUser.major || "N/A"}</p>
+                  <p>Graduation Year: {selectedUser.gradYear || "N/A"}</p>
+                  <div className="modal-buttons">
+                    {selectedUser.linkedIn && (
+                      <LinkedInButton linkedinUrl={selectedUser.linkedIn} />
+                    )}
+                    {selectedUser.resumeLink && (
+                      <ResumeButton resumeUrl={selectedUser.resumeLink} />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
+          )}
+        </Modal>
+
+        {/* Conditionally render Actives or Officers */}
+        {!showOfficers ? (
+          <div className="brothers-list">
+            {greekAlphabetOrder
+              .filter((letter) => usersByClass[letter].length > 0)
+              .map((letter) => (
+                <div key={letter} className="brother-section">
+                  <h2>{letter}</h2>
+                  <div className="brother-cards">
+                    {usersByClass[letter].map((user, index) => (
+                      <div
+                        key={index}
+                        className="brother-card"
+                        onClick={() => handleUserClick(user)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <img
+                          src="/Brothers/blank-pfp.webp"
+                          alt={`${user.name}'s profile`}
+                        />
+                        <h1>{user.name}</h1>
+                        <p>
+                          {user.major} |{" "}
+                          <i className="gradYear">{user.gradYear}</i>
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+          </div>
+        ) : (
+          <div className="officers-listing">
+            {eboardMembers.length > 0 && (
+              <div className="brother-section">
+                <h2>Executive Board</h2>
+                <div className="brother-cards">
+                  {eboardMembers.map((user, index) => (
+                    <div
+                      key={index}
+                      className="brother-card"
+                      onClick={() => handleUserClick(user)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img
+                        src="/Brothers/blank-pfp.webp"
+                        alt={`${user.name}'s profile`}
+                      />
+                      <h1>{user.name}</h1>
+                      <p className="position">{user.position}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {chairs.length > 0 && (
+              <div className="brother-section">
+                <h2>Committee Chairs</h2>
+                <div className="brother-cards">
+                  {chairs.map((user, index) => (
+                    <div
+                      key={index}
+                      className="brother-card"
+                      onClick={() => handleUserClick(user)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <img
+                        src="/Brothers/blank-pfp.webp"
+                        alt={`${user.name}'s profile`}
+                      />
+                      <h1>{user.name}</h1>
+                      <p className="position">{user.position}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
-      </Modal>
-
-      {/* Brothers listing */}
-      <div className="brothers-list">
-        {greekAlphabetOrder
-          .filter((letter) => usersByClass[letter].length > 0)
-          .map((letter) => (
-            <div key={letter} className="brother-section">
-              <h2>{letter}</h2>
-              <div className="brother-cards">
-                {usersByClass[letter].map((user, index) => (
-                  <div
-                    key={index}
-                    className="brother-card"
-                    onClick={() => handleUserClick(user)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      src="/Brothers/blank-pfp.webp"
-                      alt={`${user.name}'s profile`}
-                    />
-                    <h1>{user.name}</h1>
-                    <p>
-                      {user.major} | <i className="gradYear">{user.gradYear}</i>
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
       </div>
     </>
   );

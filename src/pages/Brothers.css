@@ -15,15 +15,16 @@
   margin: 10px;
   width: 205px;
 }
+.brother-card h1,
+.brother-card p {
+  margin: 0;
+}
 
 .brother-section h2 {
   color: #7f170e;
   font-size: 3rem;
   font-weight: 700;
-}
-
-.brother-section {
-  padding: 10vh 15vw;
+  padding: 2vh;
 }
 
 .brother-card img {
@@ -38,16 +39,19 @@
   font-size: 1.5rem;
   font-weight: 700;
 }
-
+.positon p,
 .brother-card p {
   font-size: 1.25rem;
 }
 
 /* Modal Styling */
 .modal-content img {
-  width: 330px;
-  height: 480px;
+  width: 297px;
+  height: 432px;
   object-fit: cover;
+}
+.modal-container {
+  width: 300px;
 }
 
 .modal-container button {
@@ -56,10 +60,11 @@
 
 .modal-details h2 {
   font-weight: 700;
+  margin: 0;
 }
 
 .modal-details p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -71,4 +76,12 @@
 
 .gradYear {
   font-size: 1.25rem;
+}
+
+.brother-section {
+  padding: 0 15vw;
+}
+
+.brothers {
+  padding: 5vh 0;
 }
