@@ -55,6 +55,7 @@ const Profile = () => {
             resumeLink: "",
             email: user.email || "",
             verified: false,
+            copied: false,
           };
           await setDoc(userDocRef, defaultData);
           setUserData(defaultData);
@@ -113,6 +114,7 @@ const Profile = () => {
         ...editedData,
         email: user.email || "",
         verified: false,
+        copied: false,
       };
       await updateDoc(userDocRef, updatedData);
       setUserData(updatedData);
@@ -141,101 +143,117 @@ const Profile = () => {
 
   const pfpPath = getPfpPath();
 
+  // Helper to truncate URL strings to 35 characters
+  const truncateUrl = (url) => {
+    if (!url) return "N/A";
+    return url.length > 35 ? url.slice(0, 35) + "..." : url;
+  };
+
+  // Render the field value; if the field is a URL, truncate it.
+  const renderFieldValue = (field) => {
+    const value = userData?.[field];
+    if (!value) return "N/A";
+    if (field === "linkedIn" || field === "resumeLink") {
+      return truncateUrl(value);
+    }
+    return value;
+  };
+
   if (!user) return null;
 
   return (
-    <>
-      <div className="profile-container">
-        <div className="user-container">
-          <img
-            className="pfp"
-            src={pfpPath}
-            alt="profile picture"
-            aria-label="User profile picture"
-          />
-          <button
-            type="button"
-            className="logout"
-            onClick={logoutUser}
-            aria-label="Logout button"
-          >
-            Logout
-          </button>
-        </div>
+    <div className="profile-container">
+      <div className="user-container">
+        <img
+          className="pfp"
+          src={pfpPath}
+          alt="profile picture"
+          aria-label="User profile picture"
+        />
+        <button
+          type="button"
+          className="logout"
+          onClick={logoutUser}
+          aria-label="Logout button"
+        >
+          Logout
+        </button>
+      </div>
 
-        <div className="user-info">
-          {["name", "major", "class", "gradYear", "linkedIn", "resumeLink"].map(
-            (field) => (
-              <div className="info-field" key={field}>
-                <p className="label">
-                  {field === "gradYear"
-                    ? "Graduation Year:"
-                    : field === "resumeLink"
-                      ? "Resume Link:"
+      <div className="user-info">
+        {["name", "major", "class", "gradYear", "linkedIn", "resumeLink"].map(
+          (field) => (
+            <div className="info-field" key={field}>
+              <p className="label">
+                {field === "gradYear"
+                  ? "Graduation Year:"
+                  : field === "resumeLink"
+                    ? "Resume Link:"
+                    : field === "linkedIn"
+                      ? "LinkedIn:"
                       : `${field.charAt(0).toUpperCase() + field.slice(1)}:`}
-                </p>
-                {isEditing ? (
-                  <input
-                    type="text"
-                    className="user-input"
-                    value={editedData[field] || ""}
-                    onChange={(e) => handleInputChange(field, e.target.value)}
-                    aria-label={`Edit ${field}`}
-                  />
-                ) : (
-                  <p className="user-data">{userData?.[field] || "N/A"}</p>
-                )}
-              </div>
-            )
-          )}
-
-          {isEditing && (
-            <>
-              <div className="button-group">
-                <button
-                  className="save"
-                  onClick={handleSave}
-                  disabled={isLoading}
-                  aria-label="Save button"
-                >
-                  {isLoading ? "Saving..." : "Save"}
-                </button>
-                <button
-                  className="cancel"
-                  onClick={handleCancel}
-                  disabled={isLoading}
-                  aria-label="Cancel button"
-                >
-                  Cancel
-                </button>
-              </div>
-
-              {validationErrors.length > 0 && (
-                <div className="error-messages">
-                  {validationErrors.map((error, index) => (
-                    <p key={index} className="error-text">
-                      {error}
-                    </p>
-                  ))}
-                </div>
+              </p>
+              {isEditing ? (
+                <input
+                  type="text"
+                  className="user-input"
+                  value={editedData[field] || ""}
+                  onChange={(e) => handleInputChange(field, e.target.value)}
+                  aria-label={`Edit ${field}`}
+                />
+              ) : (
+                <p className="user-data">{renderFieldValue(field)}</p>
               )}
-            </>
-          )}
+            </div>
+          )
+        )}
 
-          {!isEditing && (
-            <div className="edit-container">
+        {isEditing && (
+          <>
+            <div className="button-group">
               <button
-                className="edit"
-                onClick={handleEditClick}
-                aria-label="Edit profile button"
+                className="save"
+                onClick={handleSave}
+                disabled={isLoading}
+                aria-label="Save button"
               >
-                Edit Profile <img id="EditIcon" src="edit.png" alt="edit" />
+                {isLoading ? "Saving..." : "Save"}
+              </button>
+              <button
+                className="cancel"
+                onClick={handleCancel}
+                disabled={isLoading}
+                aria-label="Cancel button"
+              >
+                Cancel
               </button>
             </div>
-          )}
-        </div>
+
+            {validationErrors.length > 0 && (
+              <div className="error-messages">
+                {validationErrors.map((error, index) => (
+                  <p key={index} className="error-text">
+                    {error}
+                  </p>
+                ))}
+              </div>
+            )}
+          </>
+        )}
+
+        {!isEditing && (
+          <div className="edit-container">
+            <button
+              className="edit"
+              onClick={handleEditClick}
+              aria-label="Edit profile button"
+            >
+              Edit Profile <img id="EditIcon" src="edit.png" alt="edit" />
+            </button>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
