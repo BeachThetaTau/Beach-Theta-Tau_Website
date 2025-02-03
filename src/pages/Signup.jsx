@@ -37,7 +37,10 @@ const Signup = () => {
   }
 
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{ height: "100vh", backgroundColor: "#ececec" }}
+    >
       <div className="row justify-content-center">
         <form className="col-md-4 mt-3 pt-3 pb-3">
           {notice && (
