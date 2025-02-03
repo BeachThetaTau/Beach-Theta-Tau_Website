@@ -1,29 +1,32 @@
-.brothers-container {
+.brother-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  vertical-align: top;
   padding: 10px;
-  gap: 10px;
+  gap: 75px;
 }
 
-.brother {
+.brother-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 10px;
-  padding: 37.5px;
+  width: 205px;
 }
 
-.brother-group h2 {
+.brother-section h2 {
   color: #7f170e;
   font-size: 3rem;
   font-weight: 700;
-  padding-left: 13vw;
 }
 
-.brother img {
+.brother-section {
+  padding: 10vh 15vw;
+}
+
+.brother-card img {
   border-radius: 4px;
   margin-bottom: 5px;
   object-fit: cover;
@@ -31,11 +34,41 @@
   height: 290.91px;
 }
 
-.brother h1 {
+.brother-card h1 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.brother p {
+.brother-card p {
+  font-size: 1.25rem;
+}
+
+/* Modal Styling */
+.modal-content img {
+  width: 330px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.modal-container button {
+  font-size: 2rem;
+}
+
+.modal-details h2 {
+  font-weight: 700;
+}
+
+.modal-details p {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+
+.gradYear {
   font-size: 1.25rem;
 }
